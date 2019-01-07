@@ -1,2 +1,23 @@
-(setq org-todo-keywords
-  '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+#-*- mode: org -*-
+#+STARTUP: showall
+
+New document: *C-x b*
+Save document: *C-x C-s*
+
+You can make words *bold*, /italic/, _underlined_, =code= and ~verbatim~, and, if you must, +strike-through+.
+
+New Headline: Alt-Return
+Demote Headline : Alt - right
+Move headline: Alt-up/down
+Fold/Unfold: TAB/Shift-TAB
+* 
+text
+** 
+texts
+** 
+text
+* TODO 
+Shift-left/right: alter TODO
+
+
+
