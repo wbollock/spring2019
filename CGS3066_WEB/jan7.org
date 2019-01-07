@@ -1,0 +1,65 @@
+* First Day
+** Attendance:
+can miss 3 or less classes
+** need to use good code indentation, put name as top comment on every file
+** can only miss 3 classes max
+* TODO
+make a CS account and email her my username. Need to do it this week
+* Code style worth up to 10% of total assignment score
+need comments and indentation
+* IN-PROGRESS 
+programs to get
+** She uses Chrome to test code.
+** Need an SFTP client (Filezilla?)
+** Need AMPS (she uses WAMP/XAMPP)
+
+
+* Might need the textbook
+
+
+
+* *Chapter 1*
+
+** The Internet
+*** Starting connection speeds were 56Kbps (56,000 bits per second)
+*** ARPANET became today's internet
+Email was also huge, simultaneous communication was a large breakthrough
+*** They did that by *Packet Switching*
+*** Packets have:
+Addresses, sequencing info, error control
+Packets can still route through even if a portion of the network fails
+The network/ *Internet* can operate without centralized control
+** TCP/IP was a big protocol, devices can talk to each other 
+* Elements of a network
+Hosts(servers/pcs/phones), comm links(radio/satelitte), networking devices(routers/switches)
+** Every machine/router has a unique IP
+** She mentioned the process of connecting to a webpage
+1. HTTP GET request
+2. DNS Lookup
+3. Send request
+4. Server at google recieves request
+5. Machine at google sends response
+** Machine at google runs a process to listen for connections (web server) 
+*** e.g apache/ngnix
+* Client Side Tech
+** HTML/CSS 
+*** HTML5 - Markup language (tags that define elements in a document)
+*** XHTML - XML version of HTML
+** CSS
+*** CSS is about the presentation of the /content/
+*** good to not mix presentation (CSS) with content (HTML)
+** JavaScript
+*** Used for dynamic web pages (responsive)
+*** Portable scripting language - programs in JS can run in a wide variety of web browsers
+* Testing Code
+HTML5TEST - scores how compatible each browser is with HTML5 (chrome has highest)
+CanIUse - tells browser features
+*** Jquery
+  Popular JS library?
+** Validating code
+HTML5 validators, CSS, JS..
+all are avaiable
+*defintely need to validate b4 I turn it in*
+* PHP / MySQL covered briefly
+
+  

@@ -1,0 +1,17 @@
+Blocks4All: Overcoming Accessibility Barriers to Blocks Programming for Children with Visual Impairments
+Paper No. 69 
+The real-world IT problem this paper attempts to solve is ease of access to programming for those that are
+visually impaired. "Blocks-based" methods are currently used to teach programming to the visually impaired, but this study
+examined five major issues this method currently faces.
+
+Using Stakeholder Theory to Examine Drivers' Stake in Uber
+Paper No.83
+This paper examines Uber in the lense of "Stakeholder Theory." The overall problem this paper attempts to solve
+is how people handle the "gig economy" by analzying Uber driver forum messages.
+
+Watch Me Play: Does Social Facilitation Apply to Digital Games?
+Paper No. 100
+While not solving a tradational problem, this paper looks at the social facilitiation effect,
+in which people change behaviors or experience different levels of performance in games when being observed.
+This paper showed the in-game success was not influenced by "the presence of any social entity." It solved another layer of the problem
+in the difference between physical actions and virtual ones.
