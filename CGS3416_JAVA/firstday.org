@@ -1,0 +1,13 @@
+* Java
+** Evolved from c++
+** automatic garbage collection
+* Write Once Run Anywhere
+thanks to the JVM
+advantage over c++
+* Java disadvantages over c++
+1. Slower
+2. Programmer has more control/power
+3. C++ programmers run faster
+4. c++ has operator overloading/multiple inheritance, more features
+* TODO 
+she really wants me to get eclipse
