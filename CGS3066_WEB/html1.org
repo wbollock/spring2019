@@ -1,0 +1,114 @@
+* REVIEW from last class
+may need to take more notes
+** 3 elements of a network
+   hosts, communication devices, networking devices
+** ip address
+   a "unique" internet address for a particular machine or router in network
+** dns server
+   name server that manages, maintains, and processes Internet domain names and their records. translate ip addresses on DNS lookup requests
+** web server
+   a server that listens for incoming connections and delivers html files
+** front end vs back end
+   front end, processing done by client.
+   back end, processing done by web server
+* Example of HTML-CSS-JS
+** HTML
+*** hypter text *markup language*
+*** /structure and content/ of web pages
+*** html *elements* are building blocks of HTML pages, represented by tags
+** CSS can be used to say:
+   instead of HTML -> SET FONT RED, do HTML -> USE KITTEN CSS CLASS
+   then in the CSS, set KITTEN CSS CLASS font to Red
+*** *don't put together /content/ and /styling/* (seperate CSS/HTML)
+    put it together with
+    =<span class = "kitten message">=
+*** AND JS needs to go in a different files. will have seperate CSS folder, JS folder, HTML folder = webpage
+** JavaScript
+   helps build dynamic webpages, can run in a multitude of devices
+** TODO : indent like she does. may be good to review slides to see how she intended her h1, bodys, etc
+* HTML
+** HTML elements are seperated by tags
+** *element* is an individual component of HTML. two tags mark the opening/closing of an element. <p>TAGNAME</p>
+   always close every tag you open. always remember to validate your webpage w/ tools
+*** TYPES OF ELEMENTS
+**** Container Element
+<p></p> is an example. can contain other elements or content.
+**** VOID element
+contains only attributes and DOES NOT mark up text
+ex: <br>, <img>
+can terminate it with <br/>
+note: although not required, it's good to put tag content <p> "yo" </p" in quotes
+*** <!DOCTYPE>
+doucment type declaration is required in html5 so browsers render the pages in standards mode
+it's case sensitive -> *<!doctype> won't work!*
+*** <head> contains webpage title, and meta info about the page
+meta info not shown to user - provides information to the search engine
+<meta name= "keywods" content =" ... bunch of seo info... " >
+** Insert comments in HTML5, <!-- comment -- >
+** Nesting
+can nest tags inside one another. 
+whatever elements opens /first/ closes /last/
+** Headings
+heads defined by <h1> through <h6>
+<h1> most important, biggest
+** Paragraphs
+<p> paragraph </p>
+adds a little space for you 
+** *Poem Problem*
+cant just do <p> for poems
+need a *<br>* for line breaks to create poems
+*** There is a way for HTML to recongnize the text as formatted. use the <pre> tag and it will preserve line breaks made in the text editor
+** There are many text formatters
+<strong> - bold
+more in her slides
+** Links
+HTML links defined with *anchor* =<a>= tag
+href defines the links location - like a file, email, web page
+target attribute specifiies WHERE to open the linked doc/file/web page (new tab, same tab,etc)
+*** Email links
+<a href = "mailto:example@aol.com"> 
+Anchors can link to email addresses, like they can go to websites
+** Images
+best formats are PNGs and JPEGs
+*** images are defined with <img> tag
+**** src
+tells you where to find the image ON the server
+**** alt
+required
+contains text that is displayed, if something goes wrong, and client cannot render the image
+makes web pages easier for those that are disabled
+**** width, height
+optional. if omitted, browser sets image's actual width/height
+images measured in pixels
+also helps browser load the image faster, well it might.
+*** can make images as hyperlinks
+** Relative Vs Abosolute paths 
+filename.jpg = relative
+img/filename.jpg = absolute
+** Lists
+are used a lot and can be customized
+*** Unordered
+<ul> 
+<li> list item </li>
+<ul>
+(BULLETS)
+*** Ordered (sequence)
+<ol>
+<li> List Item</li>
+</ol>
+
+** Character Codes
+html5 lets you reference special characters with & symbol?
+For example, less than symbol
+=&lt=
+lt = less than
+
+** <hr> tag
+renders a literal horizontal line with extra space above/below
+CSS can be used to do this, and is better
+
+** Tables
+can represent shit in a grid
+rows and coloumns
+can be styilzed w/ CSS
+and then JS can help with filtering/sorting rows
