@@ -1,0 +1,17 @@
+* Lecture 2
+* The JDK
+contains the JVM and the compiler, javac
+** The JVM provides a layer of insulation to Java programs, so they are seperate from the OS/Hardware
+** Source files
+have .java extension
+** Bytecode files
+have .class extension
+** source code is compiled into bytecode
+** Syntax
+javac HelloWorld.java = HelloWorld.class
+* JRE 
+Java Runtime Environment
+** Interprets bytecode to machine code
+** needed to run a Java application
+** contains the Java Class Library, and the JVM ?
+
