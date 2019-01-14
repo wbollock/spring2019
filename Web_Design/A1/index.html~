@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- made by William Bollock, CGS 3066 A1 -->
+<html>
+  <head>
+    <title>Assignment 1 - My First Web Page</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+  </head>
+<body>
+<h2> Name: </h2>
+<h1> John Yossarian </h1>
+
+<h2> First Apperance: </h2>
+<h1 id="h01"> January 1942 </h1>
+<!-- needs to be italic -->
+
+<h2> Profession: </h2>
+<h1> Bombardier </h1>
+
+<h2> Abilities: </h2>
+<ul>
+  <li>Quick wit</li>
+  <li>Self preservation</li>
+  <li>Socialability</li>
+</ul>
+<!-- Strong format -->
+
+<h2>Top 3 Dressing Styles:</h2>
+<ol>
+  <li>Combat uniform</li>
+  <li>Weekend attire</li>
+  <li>Nude</li>
+</ol>
+
+<!-- bold format -->
+
+<h2>Yossarian's Picture:</h2>
+<img src="images/catch22.jpg" alt="Yossarian's picture" />
+
+<!-- work on photo sizing -->
+
+<h2>Link to Yossarian's favorite vehicle:</h2>
+<a href="landing.html">Landing Page Example </a>
+<!-- need an image -->
+
+<!-- use CSS for all formatting -->
+
+<h2>Link to some site:</h2>
+<a href="www.duckduckgo.com"><p>www.duckduckgo.com</p></a>
+
+<h2>Yossarian's friends</h2>
+<table>
+  <tr> <!-- html table rows -->
+    <th>Name</th>
+    <th>Occupation</th>
+  </tr>
+  <tr>
+    <td>McWatt</td>
+    <td>Pilot</td>
+  </tr>
+  <tr>
+    <td>Major Major</td>
+    <td>Commanding Ofifcer</td>
+  </tr>
+  <tr>
+    <td>Nately</td>
+    <td>Gunner</td>
+  </tr>
+</table>
+<!-- need to add border in CSS -->
+
+<h2>Favorite Haiku</h2>
+<p>An old silent pond..<br>
+A frog jumps into the pond,</br>
+splash! Silence again.</p>
+
+</body>
+</html> 
+

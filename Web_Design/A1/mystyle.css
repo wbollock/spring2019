@@ -1,0 +1,17 @@
+/* made by William Bollock, CGS 3066 A1 */
+h2 {
+    color: blue;
+}
+#p01 {
+    width: 64px;
+    height: 68px;
+}
+#p02 {
+    width: 800px;
+    height: 564px;
+}
+#h01 { /* date headline - h1 style, red color, underlined format */
+    color: red;
+    text-decoration: underline;
+}
+
