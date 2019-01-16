@@ -1,0 +1,35 @@
+* So far all she's gone over is starting Eclipse
+* Syntax error: 
+forgetting semicolon, etc
+* Runtime errors
+will cause program to crash, happens while program runs
+* Logic errors
+programs runs successfully, but doesn't do what you expect it to do
+* Eclipse debugging
+** need breakpoints when debugging
+* Components of a java program
+** statements
+system.out.println;
+(some action)
+** blocks
+set of statements enclosed in { }
+** classes
+every .java file has at least 1 class
+one .java file can have multiple classes in it. however, only *one of the classes can be public*
+*** name of the one public class must match the .java name
+** methods
+a function that belongs to a class
+* Main function - can put in command line arguments
+for example, java HelloWorld WillBollock
+WillBollock will be passed through as an argument, and the program can do something with it
+**  Identifier
+the name of a class,variable, field, method, constructor
+basically a name of ANYTHING
+*** rules
+cannot be a java keyword/reserved word
+can have $, _, 1231, and words
+CANNOT start with a 123124 number
+*** style
+CamelCase is good for classes, interfaces, methods
+but lowerCamelCase is good for variables, and also methods
+AVOID using $
