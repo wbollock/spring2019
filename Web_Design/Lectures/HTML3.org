@@ -1,0 +1,211 @@
+* HTML/CSS CONTINUED
+* Navigation Areas
+html lets you setup sections and stuff called Page Structure Elements
+** header
+header can contain both text and geaphics
+NOTE: not just <h1>
+literally <header>
+can be in a <body> or wherever
+
+** time
+can be date, time, or both
+<time>2019-01-01</time>
+
+** nav Element
+groups navigation links
+used if you want to put a bunch of links
+can have something like a <ul> unordered list to organize the links
+
+** figure
+describes a figure in a document
+can use 
+
+*** figcaption
+can be used with figure to describe an image
+
+** article Element
+standalone content that can be reused, like a news article, forum post, etc
+can be nested
+comments about a magazine article may be nested in the article
+
+** summary Element
+gives a right pointing arrow next a summary or caption
+when clicked, arrow reveals content in the *details* element
+
+*** details
+nested in summary
+<details>
+<summary>Title</sumary>
+text about the title
+</details>
+
+** section Element
+describes a whole section of the document
+ex: nav section could be a <section>
+maybe with <section id = "1">
+
+*** ID in the section element
+good for navigating to other places
+can use #1 to easily link to that
+
+** aside Element
+content that's related to the text, but not really relevant at the time?
+idk, confusing and seems useless
+
+** meter Element
+a visual representation of a measure within a range
+a cool looking horizontal bar graph that displays a range
+her example was the Android Java development green bar
+
+** footer Element
+content at the bottom of the webpage
+usually used for contact info, copyright notice, etc
+
+* Text Semantics
+
+** mark Element
+highlights text!<mark>this text will be highlighted</mark>
+
+** wbr Element
+wbr=  word break
+where to break the text when it gets way toooooooooooooooooooo<wbr>
+ooooo long
+
+
+** i missed whatever was after wbr
+
+
+* Grouping Elements
+
+** Blocks or Inline
+
+*** Block
+always starts on a new line
+**** examples 
+<p>
+
+*** inline
+does not start on a new line, continues
+
+** div Element 
+a *container* for other HTML elements
+styles *blocks of content* with CSS
+Div does _Blocks_
+defines sections
+good for wholeistic design choices for a large amount of text
+** span Element
+also a container for text
+used to style /inline/ text
+Span does _inline text_
+defines sections
+good for little highlights or color changes
+
+
+
+
+
+
+
+ 
+* CSS
+Cascading Style Sheets
+works in conjucation with HTML
+
+** 3 ways to connect CSS with HTML
+1. Inline Styles
+inside element tag
+2. Embedded Style Sheets
+seperate section in HTML doc
+3. External Style Sheets
+seperate file w/ css
+
+*** Inline Styles
+<p style="color:red"> text </p>
+if you wanted to change all <p> tags to Red, would have to put the change in EVERY single <p> tag
+
+**** multiple styles
+if you have two styles in one thing, like fontsize:20; color: blue; use
+semicolons (;)
+
+**** issues
+inline style doesn't really seperate presentation from content
+
+*** Embedded Style Sheets
+have a special section in your code and have all your styles right there
+put it in <head> section
+<head>
+<style type="text/css"   -------- NEED that type 
+p {
+color: blue;
+}
+</style> --------- all P's will now be blue
+
+
+**** style Element
+see above. have different options, can do javascript, plain text, etc
+specifies the encoding format of the style sheet
+
+**** CSS selector
+when you do <p> tag in the CSS, applies styles to all elements with the accompanying rule
+
+**** font-weight property
+how bold the text will be
+can use
+1. bold
+2. normal
+3. bolder
+4. lighter
+5. numbers, 100-900 range (400 is normal)
+
+**** font-family property 
+can do multiple fonts incase a browser does not support a specific font
+usually want to have one *generic font family* as a fallback incase the fonts are not supported
+{ font family: tahoma, helvetica, sans-serif }; ----- sans-serif is a generic font example
+
+**** font-size property
+if you just do 12pt, size 12 font can look different on different screens
+better to use *relative values* like xx-small, medium, large, xx-large, etc
+
+** Style Classes
+start with a . (period)
+defines styles that can be on any element
+
+.special { color: purple; }
+anything with the class special with be set to purple
+can also do ID selectors (like I did in A1)
+
+set <h1 class = "special">
+
+
+** Applying the Style Class
+<h1>
+     <h2>
+          <em>
+	      <p>
+
+How do you resolve conflicts, if the above tags have different rules for font, size, etc?
+Inheritance- the child will inherit properties from the parent
+
+** Conflicting Styles
+user- web browser guy
+author - dude that wrote webpage
+user agent - device/browser/computer thats showing the webpage
+
+all 3 combine to display the Styles
+
+Styles Cascade (hence CSS)
+*Precendence: User-defined Styles take precedence over styles defined by user agent*
+But author defined styles *takes precendence* over styles defined by user
+
+
+So, author > user > user agent
+
+** Specificity
+Lets say <em> element has a color property, but it's parent <p> element also does
+properties defined for child elements have more specificity than their parent's inheritance
+
+so <em> color would take over
+
+
+
+
