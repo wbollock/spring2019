@@ -57,7 +57,7 @@ public class Sales {
 		System.out.printf("Your subtotal is $%.2f",subTotal);
 		System.out.println(""); //empty line for formatting
 		System.out.printf("And at a tax rate of %.1f percent ,this will add $%.2f in sales tax", salesTaxRate, salesTaxTotal);
-		System.out.printf("for a grand total of $%.2f", grandTotal);
+		System.out.printf("for a grand total of $%.2f", grandTotal); // .2f will format to hundrendths place
 		
 		System.out.println(""); //empty line for formatting
 		System.out.println("Goodbye!!");
