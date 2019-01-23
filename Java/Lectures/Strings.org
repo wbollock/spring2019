@@ -1,0 +1,26 @@
+* String is an object, not a primitive var type
+** *immutable* - string class used to create and store immutable strings
+immutable = don't change once created
+like the "final" keyword
+** the StringBuilder class
+creates objects that store flexible strings
+** String class
+part of java.lang package
+*** fixed object
+a string class cannot be changed
+** Constructing a string
+1. Instansitate like an object
+
+String example = new String("Hello, World!");
+
+** String pool (note the difference)
+2. 
+before creating a string literal, "it" (not sure what it is) looks for a String with the same value in the String pool
+If it finds it, it returns the reference
+If not, it creates a new String in the pool and returns the reference.
+Note, that is only when you make Strings via 
+
+String str1 = "Hello";
+
+thats when the String pool gets called into things
+
