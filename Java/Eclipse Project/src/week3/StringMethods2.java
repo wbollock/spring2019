@@ -14,7 +14,11 @@ public class StringMethods2 {
 		System.out.println(s3); // note that s1 and s2 are unaffected
 		System.out.println(s4);
 		
-		
+		String str1 = "     Hello World     ";
+		String str2 = str1.trim(); // trims whitespace
+		System.out.println(str2);
+		String str3 = str1.replace(' ', 'F'); // replace whitespace with 'F'
+		System.out.println(str3);
 		
 		
 		
