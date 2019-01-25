@@ -24,3 +24,10 @@ String str1 = "Hello";
 
 thats when the String pool gets called into things
 
+** substring
+extracts part of a string and returns in
+takes the starting index and ending index
+
+String s1 = "Hello, World";
+String s2 =
+*TOOK NOTES IN STRING METHODS 1 AND 2 JAVA FILES*

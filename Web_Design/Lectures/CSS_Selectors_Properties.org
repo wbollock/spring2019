@@ -1,0 +1,155 @@
+* Inline
+CSS next to HTML
+* External
+CSS seperate file
+* Embedded
+CSS at top of page?
+* Above was review
+* CSS Selectors
+selector -  an html element you want to apply CSS to
+example
+p {
+color:red;
+}
+** element
+element selects all elements with the specifies tag name
+p { color:yellow;}
+whenever you see element p, make sure color is yellow
+** #id
+styles the element with specified ID attribute, uses #
+<h1 id="header">
+
+IN CSS
+#header {color:yellow;}
+** class
+.class
+selects ALL elements with the specific class attribute
+CSS
+.maintitle {font-size:100px;}
+HTML
+<h1 class="maintitle">
+
+note: you can also do h1.maintitle, so only h1 elements will be affected by class
+so could have h1.maintitle, h2.maintitle, p.maintitle, all that could have their own maintitle class
+**    * - star/asterik
+ALL elements 
+=*{font-size:10px;}=
+** element-element
+used to select elements inside elements
+p strong {background-color:green;}
+strong things in p tags will have green background color
+** VS
+** element, element
+can do two elements in one style
+p, h1 {color:red;}
+p and h1 will both be red, saves space in html
+* Pseudo-Classes
+gives access to content not declared in a document
+can be used to style visited and unvisited links differently, for example
+selector:psuedo-class {
+property:value;
+}
+
+example with anchor tag
+a:link {color:#FF0000;}
+a:visited {color: #00FF00;}
+
+*kind of link built in things, visited/link not defined by you*
+theres also a certain order for A tag psuedo classes
+* can combine psuedo classes w/ clss classes
+a.hightlight:hover { color:#FF0000;}
+* Color
+RBG, HSL
+can set both with color element
+HSL - hue saturation
+** font-size
+can set with pt (point size) or relative (relative is better) [xx-small, xx-large, large, medium]
+** font size measurements
+px, em, ex, %
+em = "M" height of a font's UPPERCASE M
+ex = "X" height of a font's lowercase x
+** TODO homework: 1rem = "strong" equivilant in CSS
+** font-face
+for custom/obscure fonts, create a CSS rule using @font-face
+** text-spacing
+can do letter-spacing, word-spacing, line-height, text-indent, text-align
+** other good CSS properties
+font-style, text-decoration, text-transform (capitalize, uppercase, lowercase)
+* 
+* 
+* 
+* 
+* 
+* Cascading Priority
+recall: styles defined by author, user, user agent (author has highest precendence, user agent has lowest)
+recall: *children inherit styles from parent elements, generally*
+Specificity: child <em> 's color has a conflict with it's <p> tag's color
+the child will have *higher specificity*
+** !important 
+tag you can put on CSS rules, has the greatest priority
+*remember an order she put on the slides of priority*
+** tie-breaker
+lets say you literally put the same
+a {color:red;} 
+a {color:yellow;}
+
+the last listed one will win
+* External Style Sheets 
+seperate document that only contains CSS
+** skinning
+only have to modify one CSS file to make style changes across a bunch of html docs
+** Advantages
+shared resource, great for large projects, uniform look for website, etc
+*  Positioning Elements
+position - provides great control over where a page element resides
+CSS element ^^^
+** Absolute Positioning
+can do stuff like top, left, z-index to shift stuff around
+can throw stuff in background (z-index:1) or foreground, up front (z-index:2+)
+** Relative positioning
+elements positioned relative to other elements
+can do superscript, subscript, shifted left, shifted red 
+*** span
+relative positioning usually in a span because it's inline grouping is required
+* Backgrounds
+can set something like a logo o stay fixed even when user scrolls
+** background image, background repeat, background-attachment:fixed
+controls how the background image is tiled, lots of different bacjground stuff
+** text-indent
+indents first line of text
+* Box Model
+all html elements rendered on a screen is a box
+recall: block boxes and inline boxes
+** Block vs Inline boxes
+Block boxes appear below the previous one, while inline boxes don't affect vertical spacing
+width is set automatically in block boxes based on the parent, while inline boxes width depends on content
+block boxes have default height basd on the content, while inline boxes don't determine layout just styling
+** Changing box behavior
+display element
+can override default box type of HTML elments
+can make <em> or <strong> display:block; instead
+** Box Model
+*** Content
+text/image/media content
+*** Padding
+space between the boxes content and it's border
+*** Border
+line between the box's padding and margin
+*** margin
+space between the box and other, surronding boxes
+these four properties are how boxes render in browsers
+** Padding
+can specifiy ALL these elements of the block. for example, {padding:50px;}
+or {padding:20px 10px;}
+             ^vertical and ^horizontal
+Goes
+ Top-Right-Bottom-Left
+20px 10px 15px 5px
+all on one line
+** Border
+width, style, color
+{border: 1px solid red;}
+** Margins vs Padding
+padding: has a background, included in click area
+margins: always transperanent, not included in click area
+should probably read the damn book
