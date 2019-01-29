@@ -2,25 +2,36 @@
 h2 {
     color: blue;
 }
+
 #p01 {
     width: 64px;
     height: 68px;
 }
+
 #p02 {
     width: 800px;
     height: 564px;
 }
+
 #h01 {
     font-style: italic;
 }
+
 #h02 { /* profession headline - h1 style, red color, underlined format */
     color: red;
     text-decoration: underline;
 }
-li { /* I couldn't find a decent way of doing strong vs bold in CSS  */
-    /* so make all list items bold */
-    font-weight: bold;
+
+#haiku {
+    font-family: Verdana, sans-serif; /* include serif font that most users have */
 }
+
+li { 
+    font-weight: bold; /* i attempted to do strong vs bold with 1rem, but it didn't look right */
+}
+
+
+
 table, th, td { /* set border of HTML table */
     border: 1px solid black;
   }
