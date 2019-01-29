@@ -1,0 +1,161 @@
+* RECALL: 
+
+** Cascading priority
+1. Important! - (most important)
+2. Inline CSS
+3. ID
+4. Class
+5. Element - (least important)
+
+
+
+* Static positioning
+default positioning for HTML elements
+Top to bottom, left to right
+
+
+
+** Block boxes
+top to bottom, new line after every box
+<p>hey</p>
+<p>block boxes</p>
+** Inline boxes
+flows left to right, wraps text
+<img src=XXX />
+<img src=XXX />
+* VS relative positioning 
+relative to something else, slightly offset from where it would be normally
+DOES NOT affect the elements surrounding it
+.relative {
+     position: relative;
+     left: 80px;
+     top: 20px;
+};
+* Absolute positioning
+totally takes you out of normal flow
+elemtent is offest from it's containers.
+can affect other elements?
+** the container block
+first element that has a position other than static
+if there is none, then the container block is <html>
+* RECALL div vs span
+div vs span
+div is block level, span is inline
+* RECALL: classes and IDs
+attributes that are attached to ALL elements that belong to one "class"
+<p class="fancy">
+IDs
+<p id="10">
+You can also COMBINE ID's and CLASSes
+** absolute - will always stay in that position, almost like coordinates
+top:0;
+left:0;
+will be in top left always
+** note about attributes
+left:200px; will move it FROM the left, offest FROM the left by 200px
+** Sticky 
+Sticky bases itself on the user's view, the useragent/browser
+kind of like absolute but always in the user's view, will "sticky" to where it is placed
+* Absolute vs Relative is really important , I think
+* TODO Absolute positioning slide should be reviewed
+* 
+* 
+* 
+* 
+* Floats
+** Floating
+takes an element in it's normal flow, but takes it to the max far left or max far right
+then other content flows around that element
+*always specify width* or else it'll take up the whole page
+.floated {
+float: right;
+width: 50%;
+margin-left; .5em;
+margin-bottom: .5em;
+}
+good for header tags and shit, then <p>s below it will float to that
+** Clear
+specifies on which side other elements *cannot appear*
+* 
+* 
+* 
+* 
+* 
+* In-line box
+** block
+element as a block
+** inline
+inline element, same line
+** inline-block
+a combination of the two above
+* 
+* 
+* 
+* Flex Boxes
+** container
+a container element can become flexible and adjust itself to internal items
+use display:flex;
+** properties
+it has a shit ton, lots of flex related stuff
+bascically can resize itself based on the browser window sizes
+** website link
+http://ww2.cs.fsu.edu/~brodhead/3066/L6/website.html
+* 
+* 
+* 
+* 
+* 
+* Media Types and Queries
+CSS supports different media, like handheld, speech to text browsers, printed types, etc
+/screen/ is most common type
+** Why?
+ When printing a website, often don't want your dark website to eat everyone's ink. Can
+ tell the difference with print preview
+ Also, some fonts look better on screen than paper.
+** Media Queries
+allows you to figure out what type of device the guest is doing. based on the format/screen width/height,
+website can change
+** 
+** 
+** 
+** Drop Down menus
+:hover (FOR ASSIGNMENT 2)
+changes when you put mouse on it, menu drops down
+** 
+** 
+** 
+** 
+** User Style sheets
+external style sheets defined by user. set in browser's options, used by people with
+disabilities
+*** relative measurements
+use relative measurements like .75em instead of 9pt ANYTIME YOU CAN, or else
+you'll override the user
+* 
+* 
+* 
+* MORE CSS
+** Shadows
+text-shadow: -4px 4px 6px dimgrey;
+horiziontal offest, vertical offset, blur radius, color
+** Rounded Corners
+border-radius property
+border-radius: 15px;
+15px -> slightly round
+50px -> completly round
+** RGB/RGBA
+RGB = red green blue
+RGBA = red green blue *alpha*
+alpha is the opacity, from 0.0 (transparent) to 1.0 (opaque)
+there are over 16million different RGB colors, only 140 html color names
+** HSL/HSLA
+HSL = hue saturation lightness
+HSLA = hue saturation lightness alpha
+Hue represents the degrees on a 360 degree color wheel
+Saturation - intensity of the hue, from 0% (gray) to 100% (full color)
+Lightness - intensity of light, 0% - black, 100% - white, 50% = normal
+** Box Shadows
+box-shadow: 25px 25px 50px dimgrey;
+similar to text shadow
+adds a box shadow to /block-level elements/
+
