@@ -1,0 +1,5 @@
+/* made by William Bollock, CGS 3066 H2 */
+
+li.navbar { /* horizontal nav bar */
+    display: inline;  /* makes it display horizontal */
+} /* TODO: center it */

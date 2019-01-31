@@ -1,0 +1,152 @@
+* REVIEW
+** normal flow
+top to bottom, left to right. default positioning for html
+** four ways to position elements
+absolute, relative, static
+floats
+inline-boxes
+flexboxes
+** one difference between classes and ids
+classes apply to all elements, ids are for specific elements
+** which font-family is better for screens, which is better for print
+Screen: sans-serif 
+Print: serif
+** what would a web author do that ensure that people w/ disabilities have full flexibility to use user style sheets?
+use relative measurements, don't use absolute measurements
+* New: gradients, text stroke, image borders, animation, selectors
+* 
+* 
+* 
+* Gradients
+* Linear Gradients
+a type of image tat gradually transitions from one color to the next horizontally, vertically, or diagonally
+background: linear-gradient(
+top,white 15%, blue 50%, navy 75% );
+*top can also be left* (for a horizontal graident, starts from the left)
+
+starts from a white, then blueish, then dark navy
+
+** color-stops
+you can specify the points at which to change colors
+** the gradient line
+angle at which the graident ends
+* Vendor prefixes
+means code is for different browsers
+-ms- Internet Explorer
+-moz- Firefox
+-o- Opera
+-webkit- Chrome, Safari, Android
+** so for a gradient, you'll have: 
+-webkit-gradients
+-moz-linear-graident
+etc
+*** depends on
+* More gradients 
+** diagonal gradients 
+background: linear-gradient(
+135deg, white 15%, plum 50%, purple 75%);
+135 deg is starting point
+** more about browsers
+last version of the style always takes precedence. always put the standard version at the end
+* Radial Gradients
+starts from the center and changes outwards
+** first value
+start position of gradient:
+center, top, bottom, left, right
+give starting color (yellow) and it slowly turns into ending color (red)
+* Text Stroke
+allows you to add an outline around the text
+sort of a word art -esque text outline
+* multiple background images (section 5.8)
+specify two images, and their
+background-position:
+background-origin:
+background-repeat:
+* TODO know the Box Model for the exam
+* Reflection
+only in WebKit-based browsers (chrome, safari, android)
+flips an image, reflects it
+-webkit-box-reflect
+specify direction of reflection
+can also do a gradient on it
+* Image Borders
+border-image - uses image to place a border around any block level element
+can specify border-width and width
+border-image: url(border.png) 80 80 80 80 stretch;
+                     ^ image   ^ ^  ^   ^ top, right, bottom , left (offset)
+                                            ^ stretch specifices how the image is set
+stretch has other options like:
+stretch repeat
+round
+space
+repeat
+* Animation, Selectors
+Need Webkit and Moz again.
+** complicated af
+** animation
+lets you represent several animation properties in a shorthand notation
+tons of different values
+animation-name
+animation-timing function
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+*** animation-timing-function
+linear: same speed from start to finish
+ease: starts slowly, increases, ends slowly
+ease-in: starts slowly, speeds up
+ease-out: starts fast, slows down
+ease-in-out: starts and ends slowly
+cubic-bezier: can use actual values
+*** animation-play-state
+specifies whether the animation is paused or running
+*** @keyframes Rule and Selectors
+defines an elements properties that will change during an animation, what they'll change to,
+and when they'll change
+@keyframes movingimage
+{
+ 0% {do shit}
+ 25% {opacity: 1; left:0px;top: 50px;} --> basically at 25% through the image, do this stuff 
+
+}
+* Transitions and Transformations
+** transitions
+allows you to change an element's style to change over a specified duration
+can ONLY do starting and ending values
+VS 
+@keyframes from earlier, which let you do intermediate values
+** transform
+allows an element to move
+** in the example
+http://ww2.cs.fsu.edu/~brodhead/3066/L7/transitions.html
+basically, set transition for (4s) to /transform/ when img:hover
+transform then is like, ok, i'm called up, do a 360 rotate
+* Skew
+transformations cna also skew block-level elements, slanting them at an angle
+sort of like a stretch
+** transform
+you can use skew to melt images into other images
+uses a change in opacity to measure
+* Downloading Web Fonats, @font-face
+maybe you see a font you really like, that people don't have on ter computer
+can use fonts.google.com
+gives you CSS rules and a stylesheet to implement
+* Flexible Box Layouts
+Flex Boxes!
+define a div to which we apply the flexblox clas
+Note that on the flex box site, she is using these weird ass :nth parent child divs or something
+i have no goddamn clue what that means
+furthermore, overflow text is hidden on the boxes.
+do that styling in the p {overflow:hidden; } CSS tags
+* Multicoloumn Layout
+can use media queries to specify how the coloumns look on certain types of screens
+can do that with the
+** @media rule
+used to determine the type and size of device on which the page is rendered
+result is either true or false
+rule's styles applied only if result is true or false
+then have specific coloumn rules in the div underneath that
+@media itself can tell what type of device it is
+
+no if-else statements, just nested normally
