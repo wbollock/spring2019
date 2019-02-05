@@ -50,10 +50,10 @@ a:hover {
 }
    
 #content_3 {
-    display: flex;
+    display: flex ;
     flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
-    background: #CEB888;"Adobe Garamond Pro"
+    background: #CEB888;
 }
 

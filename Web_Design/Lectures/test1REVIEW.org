@@ -1,0 +1,25 @@
+* Multiple choice test!!!!
+go through EACH property and know what values it has, and what they do, and what the property does
+35 mcs, 7 questions per chapters 1-5
+** example
+understand animation, know what it is. know what properties are, and know what they do
+* Kahoot Questions
+** protocol for communicating over ARPAnet
+TCP
+NOT packet switching -> mya be on test
+** <h6> smallest heading
+** how a table is mad up, tr and td??
+<tr> row
+<td> data
+** datetime may be on test. date vs datetime
+** placeholder, autofocus
+** summary!!!
+** know what *article* is
+** li, em vs li em in CSS
+** MIME type stuff
+set <link></link>, MIME type of external style sheet
+** blur radius vs border radius
+** radial-gradient, linear-gradient
+** *border-image-slice* --- important
+** move, rotate, scale, and skew elements ---> *transformations*
+know transitions vs transformations

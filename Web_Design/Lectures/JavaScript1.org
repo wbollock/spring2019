@@ -1,0 +1,155 @@
+* JavaScript - Part 1
+Chapter 6 Lecture 8
+
+** How web pages work?
+Laptop -> Web Browser -> Type URL, please enter. And then what?
+Browser sends HTTP *GET* request to get index.html file at google.com
+then, server responds by sending back HTML file that's requested
+
+HTML file has stuff like <img src=pic.jpg>, requests again to server.
+Server sends that over.
+
+Going back and forth very quickly.
+
+Then, you see loaded web page.
+HTML + CSS produces a static webpage.
+
+** JavaScript is a programming language
+The only one your browser can execute *natively*
+Only option for your webpage to do things.
+was suppoed to look like Java
+** console.log
+console.log('Hello, world!');
+JS's equivalant to System.out.println("");
+** JavaScript loading
+<head>
+     <script src="script.js"></script>
+</head>
+
+Then, JS script runs CLIENT SIDE
+** Execution
+JS has no "main", just goes top to bottom
+no compilation by developer, done by browser
+compiler = JavaScrpt interpreter
+Just in time (JIT) compiliation
+** TODO read slide about JIT interpreter, link to interesting thing
+** JavaScript Console
+when you choose "Inspect" on Website, given "Console" option at the top
+Console tab is also a /Shell/ so you can type in interactive JS
+(Read-eval-print loop)
+** Functions
+function hello() {
+     console.log('Hello!';
+}
+hello();
+
+Hello! would appear in the console
+*** execution
+the browser executes/holds the functions definition first, then runs it when it wants to
+NOTE!!!!::
+YOU CAN run functions without declaring them first.
+You can *HOIST* function declarations.
+
+hello();
+function hello() {
+     console.log('Hello!';
+}
+
+This WORKS!
+You cannot rely on this though. 
+* More JS
+may need to enable JS on your browser, if not -webkit-
+* Inline JS
+you can do javascript in line!!
+<script type ="text/javascript">
+document.writeln(
+"<h1>Welcome to JavaScript!</h1>" );
+
+</script>
+
+Put HTML right inside the JS w/ document.writeln
+** order
+script tag run first, and head is too
+* back to the script
+<script type ="text/javascript">
+document.writeln(
+"<h1>Welcome to JavaScript!</h1>" );
+
+</script>
+
+"is a *string literal*, can use double or single quotes
+* Document objcet
+Browser's document object represents current HTML document, lets you spit out text to it
+browser has a full set of objects that let programmers manipulate EVERY element
+** an object
+in computer's memory, contains infroatmion
+has attributes (data) and behaviors (methods) tied to it
+methods use data to perform useful actions for the client of the object
+** document object
+document.write(
+"<h1>Welcome to JS programming</h1>" );
+
+paratheses contain the arguments of the writeln method
+technically semicolons aren't required, statement terminators, it's good practice anyway
+** writeln method
+wrtes a line of HTML5 text to HTML5 doc
+*does not gurantee* that the line of text will appear in the HTML document
+browser will render HTML5 elements as it normally does
+** Case sensitive
+JS is case sensitive
+** JavaScript files
+.js files, external files, are better as the code is reusable for other HTML5 docs
+** note: there's write vs WRITELN
+write displays a string similar to writeln, but does not put output cursor at the beginning of next line
+kind of like java print vs println
+** + operator (concatenation)
+joins two strings together
+overloaded operator
+** writing vs rendering HTML5
+different!!!
+Writing html5 text creates the html5 that is then rendered by the browser
+** Dialog
+an alert is a type of Dialog
+a dialog provides important "pop up" information to grab the user's attention
+*** window
+uses method alert to display the alert /dialog/
+*** alert
+requires an argument, needs a string in this case
+window.alert( "Welcome to \nJS \nProgramming!" );
+note the \n newline escape sequence
+* Escape sequences
+backlash followed by character(s), combined to form a special character
+\n -> newline character
+* Prompt dialogs
+can generate part or all of a web page's content when it is shown to user
+** dynamic vs static web pages
+content has ability to change, dynamically
+EX: user prompted to enter name. Totally different page shown based upon their name.
+* Keywords
+EX: var
+denotes a variable
+need to declare with var before they're used
+cannot start with a digit, or a reserved keyword
+* Delarations
+end with semicolon ;
+can declare several vars in one declaration
+better to do it on seperate lines
+* Comments 
+//, thank god
+/* for multiline */
+* prompt Method
+has two arguments
+name = window.prompt("Please enter your name" );
+the *second argument* is the default text that will be shown to the user in a prompt window
+* = operator
+assignment operator, binary. 
+* null & undefined
+null is literally *no value*
+let x = null;
+not a string literal, but writing a null value to a document will display the word "null"
+vs 
+** undefined
+value given to a variable that does /not yet have a value/
+let y = undefined;
+is the same as
+let y;
