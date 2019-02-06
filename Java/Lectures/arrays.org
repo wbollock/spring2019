@@ -1,0 +1,28 @@
+* array is collection of similar types of info
+
+** iterating through it
+
+for(int i=0;i<arrsize(?);i++)
+
+enhanced for
+for(int element; arr)
+public static void printArray(int[] arr)
+{
+     for(int number : arr)
+          {
+	   System.out.print(number);
+	   }
+
+}
+** multi-dimensonal array
+gradeTable[4][0]
+4th row, column 0
+
+** methods
+write once, run t many times
+static methods called without declaring an object
+
+
+** can declare/write methods AFTER public stat void main
+  then do method("parameter"); in the main function
+similar to JS hoisting?

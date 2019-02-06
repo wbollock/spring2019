@@ -14,7 +14,7 @@ NOT packet switching -> mya be on test
 ** datetime may be on test. date vs datetime
 ** placeholder, autofocus
 ** summary!!!
-** know what *article* is
+** k now what *article* is
 ** li, em vs li em in CSS
 ** MIME type stuff
 set <link></link>, MIME type of external style sheet
@@ -23,3 +23,5 @@ set <link></link>, MIME type of external style sheet
 ** *border-image-slice* --- important
 ** move, rotate, scale, and skew elements ---> *transformations*
 know transitions vs transformations
+
+

@@ -1,7 +1,9 @@
 /* made by William Bollock, CGS 3066 H2 */
 #topbar {
     width:100%;
-    height:1.35em; /* TODO: change from absolute measurement */
+    position:fixed;
+    top:0;
+    height:23px; /* TODO: change from absolute measurement */
     border-style: solid;
     border-color: #782F40; /* TODO: change to fsu maroon */
     background-color: #782F40;
@@ -39,19 +41,30 @@ a:hover {
 
 
  
-#content_2 { 
+#content_1 { 
     display: flex;
-    position: static;
     width:100%;
-        height: 200px; 
-	background: #CEB888;
-	column-count:2;
-	
+    height: 600px;
+    background: #CEB888;
+    padding-left:80px;
+    padding-right:80px;
+		
+}
+
+#content_1_img {
+    max-widht:100%;
+    height:20%;
+    object-fit:contain;
+    padding:10px;
+}
+#content_1_text {
+    margin:50px;
 }
    
-#content_3 {
+#content_2 { /* little pictures */
     display: flex ;
-    flex-wrap: nowrap;
+    flex-flow: nowrap;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
     background: #CEB888;
