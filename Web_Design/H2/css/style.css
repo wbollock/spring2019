@@ -1,15 +1,44 @@
 /* made by William Bollock, CGS 3066 H2 */
-#topbar {
+#topbar { /*top bar in red, has 3 icons */
     width:100%;
     position:fixed;
     top:0;
-    height:23px; /* TODO: change from absolute measurement */
+    height:23px; 
     border-style: solid;
-    border-color: #782F40; /* TODO: change to fsu maroon */
+    border-color: #782F40; /* fsu maroon */
     background-color: #782F40;
 }
+#icon-color {
+	margin: auto;
+	background: #782f40;
+	height: 45px;
+	width: 100%;
+}
+
+#icon-container {
+	padding-right: 100px;
+	padding-left: 100px;
+	width: auto;
+	float: right; /* sticks to upper right */
+}
+
+#icons-menu > li {
+	display: inline;
+    list-style: none;
+    position:relative; 
+    top:-20px; /* moves element up, down from top */
+}
+
+#seal { /* for FSU seal */
+	position: absolute;
+	top: 15px;
+	right: 55%;
+    left: 45%;
+    width:30%;
+    height:30%;
+}
  
-#title_bar{
+#title_bar {
     display: block;
     font-family:adobe-garamond-pro, times, serif; /* direct from FSU */
     font-size:16x;
@@ -39,6 +68,13 @@ a:hover {
     background-color: lightgray;
 }
 
+body {
+    margin: 0;
+    font-family: "Benton Sans", Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.777;
+}
 
  
 #content_1 { 
@@ -62,7 +98,7 @@ a:hover {
 }
    
 #content_2 { /* little pictures */
-    display: flex ;
+    display: flex;
     flex-flow: nowrap;
     flex-direction: row;
     justify-content: center;
@@ -70,3 +106,7 @@ a:hover {
     background: #CEB888;
 }
 
+#thumbnail {
+    height:15%;
+    width:15%;
+}
