@@ -59,7 +59,7 @@ html{
     text-align: center;
 }
 
-a:hover {
+#div_nav a:hover {
     background-color: lightgray;
 }
 
@@ -173,7 +173,9 @@ a:hover, a:visited, a:link a:active, a {
     text-decoration: none;
 }
 
-
+a:hover {
+        background-color: #ceb888;
+}
 
 
 /* start of content 3 */
