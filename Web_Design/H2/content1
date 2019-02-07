@@ -1,0 +1,61 @@
+
+   <!-- maybe a span could work here? -->
+   <!-- or div containing everything -->
+    <div id="content_1">
+      
+      <div id="content_1_img">
+	<img src="images/main.jpg" alt="Interior Design Students" />
+      </div>
+      
+      <div id="content_1_text">
+	
+	  <h2> FSU's interior architecture and design program among nation's best </h2>
+	  <p> Florida State University's Department of Interior Architecture and Design climbed in the national rankings<br> published by <em>DesignIntelligence</em>.</p>
+	  <p> READ MORE > </p>
+	  
+	  </div>
+
+      
+</div>
+
+
+
+
+
+    
+    <br>
+    
+<div id="content_2">
+      <div>
+            <pre>
+            <p>Visit our news sites for more national and international stories from Florida State.</p>
+            <ul>
+            <li>News</li>
+            <li>Research News</li>
+            <li>President's Panel on Namings and Recognitions</li>
+            </ul>
+            </pre>
+      </div>
+
+      <div id="thumbnail">
+	      <img src="images/content3_1.jpg" alt="Content 3 Image 1" />
+      </div>
+      <div id="thumbnail">
+	      <img src="images/content3_2.jpg" alt="Content 3 Image 2" />
+      </div>
+      <div id="thumbnail">
+	      <img src="images/content3_3.jpg" alt="Content 3 Image 3" />
+      </div>
+      <div id="thumbnail">
+	      <img src="images/content3_4.jpg" alt="Content 3 Image 4" />
+      </div>
+      <div id="thumbnail">
+	      <img src="images/content3_5.jpg" alt="Content 3 Image 5" />
+      </div>
+      
+    </div>
+</div> <!-- end of Content 2 div -->
+<br>
+<div> <!-- Content Section 3 -->
+
+
