@@ -98,7 +98,6 @@ body {
 {
     height: 90vh; width: 100%;
     background-color: #F4F4F4;
-    margin:-50px;
 }
 
 #content_1_top {
@@ -169,6 +168,56 @@ height: 45vh; width: 50%;
     margin-left: 5%; 
     background-color: chartreuse;
 }
-a:hover, a:visited, a:link a:active, a{
+/* to get right of link underlines */
+a:hover, a:visited, a:link a:active, a {
     text-decoration: none;
-  }
+}
+
+
+
+
+/* start of content 3 */
+#main_content_3
+{
+    height: 30vh; width: 100%;
+    background-color: black;
+    margin:50px;
+}
+#content_3_left
+{
+height: 30vh; width: 50%;
+    background-color: aquamarine;
+    float: left;
+}
+#content_3_right
+{
+height: 30vh; width: 50%;
+    background-color: red;
+    float: right;
+}
+#content_3_left_one{
+    height: 30vh; width: 16.6666666667%;
+    background-color: red;
+    margin-left:30%;
+}
+#content_3_left_two{
+    height: 30vh; width: 50%;
+    background-color: blue;
+    
+}
+
+#content_3_right_top{
+
+    height: 10vh; width: 100%;
+    background-color: pink;
+    margin-top:-12px; /* for alignment */
+}
+#content_3_right_bottom{
+    margin-top:130px;
+    height: 5vh; width: 100%;
+    background-color: white;
+}
+#centering_button {
+    text-align: center;
+    vertical-align:text-bottom;
+}
