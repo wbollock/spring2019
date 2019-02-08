@@ -1,0 +1,98 @@
+* code writing
+accept input from keyboard, iterate through array
+
+* java vs javac
+will be a question
+
+* know multi-dimensional arrays
+
+* anatomy of program
+statements < blocks < methods < class
+all 3, statements & blocks & methods go in class
+*components of java class*
+
+* comments
+//
+/*
+*/
+
+* reserved words
+cannot be used in identifiers
+
+* escape sequences
+for use in print statements
+\t - tab
+\r ? - don't need to know r
+\n - new line
+\" - double quote
+\\ - backslash
+
+* variable names
+A-z
+0-9 /cannot start with a digit/ -> probably test question
+_ -> underscore
+$  -> $ sign
+
+* know println, printf, print
+println -> new line
+print -> ouput stream
+printf -> floating point, decimal digits
+%f", variable ^^^^^^^
+%d
+%s
+
+* Scanner
+Scanner sc = new Scanner(System.in); *do not forgot to put System.in*
+
+* declare and intialize variables
+putting int into double
+
+ 
+
+* primitive data types
+all are primitive except for String
+
+
+* operators
+()
+!
+*
+/
+%
++
+-
+know precedence, how to use all of them
+
+* String
+know String.equals("Yes")
+NEVER use ==
+
+String name = new String ("Yes");
+OR
+String name = "Yes";
+
+* logical operators
+&&
+||
+!
+
+* if/else/else if
+know syntax, how to write it
+
+* question 4 on review
+int sum=0;
+for(int i = 1; i<200;i++)
+      if(i%3==0)
+      {
+        sum=sum+i;
+      }
+
+* maybe advantages of C++ over JAva will be on test
+but for Java > C++
+run once, run anywhere
+pointers and shit
+
+* #10 on review
+String.replace method -> know String methods!!!
+do concat for all 10 strings
+then String.replace("e", "i");
