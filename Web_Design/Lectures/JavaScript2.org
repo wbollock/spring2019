@@ -1,0 +1,44 @@
+* js files
+we can put JS inline, but it'll be better to do it externally
+
+* document object
+represents HTML5 document currently being displayd in browser
+
+* window object
+uses method /alert/ to display the little dialog box
+also has the method /prompt/, lets user put in value
+
+* null & undefined 
+
+** null
+no value
+
+** undefined
+value given to a variable that has not been given a value
+
+* adding integers
+
+** parseInt
+converts strings to an integer
+number1 = parseInt( firstNumber );
+
+* Memory
+
+** variable
+replaces the previous value in a memory location
+then when it's read, is nondestructive?
+
+* Loosely Typed Language - JS
+do NOT have to declare what type the variable is
+
+* TODO undefined vs null -> she keeps stressing that
+
+* Arthimetic Operators
+% mod operator
+13 % 7 -> result is 6
+
+** equality stuff
+we went through precedence/order
+and equality and relational operators
+
+
