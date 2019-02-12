@@ -81,7 +81,7 @@ public class Shipping {
 		System.out.println("Number of miles = " + shipDistance);
 		System.out.println(""); // empty for formatting
 		//calcuation
-		if(amazonPrime == "Yes")
+		if(amazonPrime.equals("Yes"))
 		{
 			double cost = (shipRate * Math.ceil((shipDistance/50))) * .9; // do .9 to give amazon prime members 10& discount
 			System.out.printf("Total shipping charges = $%.2f", cost);

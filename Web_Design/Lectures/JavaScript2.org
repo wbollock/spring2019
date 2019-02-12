@@ -42,3 +42,99 @@ we went through precedence/order
 and equality and relational operators
 
 
+** more about equality
+!= and == do type conversions before the comparison
+!= and == are basically broken
+example: 
+'' == 0
+0 == '0' -> even though one is a string, also true
+null == undefined // true
+
+instead of fixing this.... this added 
+*===* and *!==*
+
+added new operators
+*new operators do not do the type conversion*
+
+* Control Statements 
+
+** Sequential execution
+execute statements in order they appear
+
+** Transfer of control
+changing the order in which the statements execute
+
+* Flowchart 
+graphical representation of an algorithm/code
+*diamond symbol* -> means a decision is being made
+
+* Selection
+
+** if statements
+single-selection statement, selects or ignores a single action
+
+if ( studentGrade >= 60 )
+   document.writeln( "<p>Passed</p>" );
+
+** if..else statement
+double-selection
+
+if ( studentGrade >= 60 )
+   document.writeln( "<p>Passed</p>" );
+else
+   document.writeln( "<p>Failed</p>" );
+
+** switch statement
+multiple-selection
+
+* Conditional operator
+takes three operands
+shorcut for /if statement/
+
+function getFee(isMember) {
+  return (isMember ? "$2.00" : "$10.00");
+}
+
+console.log(getFee(true));
+// expected output: "$2.00"
+
+console.log(getFee(false));
+// expected output: "$10.00"
+
+console.log(getFee(1));
+// expected output: "$2.00"
+
+* Errors
+
+** logic error
+has it's effect at execution time
+
+*** fatal logic error
+script shuts down, terminates prematurely
+
+*** nonfatal logic error
+script continues, but script produces incomplete results
+
+* Repetitions
+
+** while
+var product = 2;
+while ( product <= 1000 )
+     product = 2 * product;
+
+
+// note that if you put a letter when JS expects a number, it'll output *NaN*
+(Not a Number)
+
+* Floating-point
+JS represents all numbers as floating-point numbers
+
+* Top-down, Stepwise Refinement
+problem solving/technique that you do for programming problems
+helps develop something structured
+1. start w/ psuedocode
+2. refine the problem into smaller tasks, list them in order they need to be performed
+
+note: //number divided by zero is *undefined*//
+* Sentinel-Controlled Repetition
+*sentinel value* aka flag value is used

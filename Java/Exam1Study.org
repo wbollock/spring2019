@@ -1,0 +1,150 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+* Basic Java Syntax
+** compile and run java program
+javac
+java
+** 3 types of errors
+syntax -> will not compile
+logical -> program runs but doesnt do what you expect
+runtime -> happens while program running, divide by zero
+** components of java program
+statements -> command in code ;
+blocks -> {
+}
+classes -> all .java files have one class
+methods -> function (all functions are methods, always contained in a class)
+** reserved words
+can't use em!
+** escape sequences
+\t
+\n
+\\
+\"
+** style guidelines for identifiers
+camelCase
+* I/O
+** print
+System.out.print("Yo"); goes in output stream
+** println
+System.out.println(""); makes a \n
+** printf
+System.out.printf("Hey, here's an int %d",varName); -> /%d is bytes, shorts, int, long/
+%f -> /%f are float-point nums, (float & double)/
+** New Scanner
+Scanner sc = new Scanner(System.in);
+** read data
+int i;
+i = sc.nextInt();
+sc.next();
+sc.nextLine();
+* data types
+** naming/declaring/intializing vars
+int i = 0;
+int camelCase = 0;
+String nameOfString = new String("Txt of string");
+OR
+String nameofString = "Txt of String";
+** Primitive data types
+all but String
+** Type conversions
+*** Implicit
+int i = 99999999;
+float f = i;
+*** Explicit
+int i = 99999999;
+byte b = (byte) i;
+b = i;
+** Arthimetic Operators
++
+-
+% = reminder
+* String class methods
+** Declaring and intializing string
+String nameString = "yo";
+String namestring = new String("txt");
+** Testing for string equality, comparing String
+DO NOT use String1 == String 2
+String class part of Java.lang
+
+if (string1.equals(string2))
+{
+// do stuff
+}
+Also get equalsIgnoreCase()
+*** comparing strings 
+if (str1.compareTo(str2) 
+THEN
+< 0 string 1 comes before string 2
+== 0 the same as string 2
+> 0 string 2 comes before string 1
+
+so
+
+if (str1.compareTo(str2) < 0)
+string 1 comes before string 2 in alapbetic order
+** substrings
+substring() -> extracts part of string and returns it
+takes beginning and ending index
+or just the beginning
+String string2 = string1.substring(0); -> whole string
+** Extracting individual characters and replacing
+charAt() -> returns a specific character at an index
+also the replace
+String replaceString = string1.replace('a','e'); -> replaces all a's with e's
+* Selection statements, loops
+** Relational and logical operators
+==
+!=
+>
+>=
+<=
+!!
+&&
+** simple, multiple, nested if statements
+if(x == y)
+{
+// do math
+ if(x == z)
+ {
+  // do more math
+ }
+
+}
+** switch - case
+switch(month) {
+case 1: // do stuff
+break;
+
+}
+** while, do-while, for loops
+while(x == y)
+{
+
+// do calculations
+}
+
+
+do
+{
+shittttt
+}
+while(x == y);
+
+
+for(int i =0; i<arr; i++)
+{
+yoo
+}
+
+
+* Writing static methods in Java 
+** Simple methods 
+public static int sum(int x, int y, int z)
+{
+int answer;
+answer = x + y + z;
+}
+// public, method accessible everywhere
+// static - method doesn't need an object
+
