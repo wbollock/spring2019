@@ -138,3 +138,5 @@ helps develop something structured
 note: //number divided by zero is *undefined*//
 * Sentinel-Controlled Repetition
 *sentinel value* aka flag value is used
+* LIS4368 A2
+  DEADLINE: <2019-02-21 Thu -3d>
