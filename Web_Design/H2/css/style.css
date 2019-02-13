@@ -290,14 +290,15 @@ a:hover {
     height:30vh;
     width:25%;
     
+    
 
 }
 #content_4_middle
 {
     float:left;
     height:30vh;
-    width:37.5%;
-    background-color:red;
+    width:37.5%; 
+    
     
 }
 #content_4_right
@@ -305,7 +306,7 @@ a:hover {
     float:right;
     height:30vh;
     width:37.5%;
-    background-color:blue;
+    
     
 }
 #content_4_left_upper
@@ -368,7 +369,7 @@ a:hover {
     
 }
 .margin_left{
-    margin-left:7rem; /* only the right element needs to be moved to the right */
+    margin-left:18rem; /* only the right element needs to be moved to the right */
 }
 
 /* start of content 5 */
