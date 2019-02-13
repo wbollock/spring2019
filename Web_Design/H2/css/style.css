@@ -274,29 +274,29 @@ a:hover {
 /* start of content 4" */
 #main_content_4_border
 {
-    height: 35vh; width: 100%;
-    background-color: #CEB888;
+    height: 37vh; width: 100%;
+    background-color: #F3EDE1;
     padding:3rem;
 }
 #main_content_4
 {
     height: 30vh; width: 90%;
-    background-color: #CEB888;
+    background-color: #F3EDE1;
     margin:0 auto;
 }
 #content_4_left
 {
     float:left;
     height:30vh;
-    width:33.33333333%;
-    background-color:green;
+    width:25%;
+    
 
 }
 #content_4_middle
 {
     float:left;
     height:30vh;
-    width:33.33333333%;
+    width:37.5%;
     background-color:red;
     
 }
@@ -304,24 +304,73 @@ a:hover {
 {
     float:right;
     height:30vh;
-    width:33.33333333%;
+    width:37.5%;
     background-color:blue;
     
 }
 #content_4_left_upper
 {
-    height: 15vh; width: 30%;
+    height: 15vh; width: 22.5%;
     position: absolute; 
-    background-color: blue;
+    
     
 }
 #content_4_left_lower
 {
-    height: 15vh; width: 30%;
-    background-color:purple;
+    height: 15vh; width: 22.5%;
+    
     position: absolute;
     margin-top:19.5rem;
 }
+#content_4_left_lower_col1{
+    height:15vh;
+    width:50%;
+    
+}
+#content_4_left_lower_col2{
+    height:15vh;
+    width:50%;
+    position: relative;
+    left:3rem;
+    
+}
+#column_boxes
+{
+    position: relative;
+    list-style: none;
+    font-size: .75em;
+    padding: 5px 0px;
+    border-top: 1px;
+    border-top-style: solid;
+    border-color: #782f40;
+    right: 40px;
+    top: -30px;
+}
+#column_boxes:hover{
+    border-color: #cbbb9a;
+    background-color: #fafad2;
+}
+#invisible_text{ /* makes text color same as background and thus 'invisible' */
+    color:#F3EDE1; /*this might seem stupid but it lets me keep spacing correct */
+}
+#yellow_line{ /* divider between links and buttons */
+    margin-top:10rem;
+    background-color:#CCCC00;
+    height:0.1vh;
+    width:90%;
+}
+#red_button{
+    border: 0.1rem solid #782f40;
+    background-color: #782f40;
+    padding: 1rem;
+    color: white; /* sets text white, not button */
+    
+    
+}
+.margin_left{
+    margin-left:7rem; /* only the right element needs to be moved to the right */
+}
+
 /* start of content 5 */
 #content_5_main_outer{
     height: 35vh; width: 100%;
