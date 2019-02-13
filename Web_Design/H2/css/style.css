@@ -13,7 +13,20 @@ body {
     font-style: normal;
     line-height: 1.777;
     overflow:hidden; /* prevent certain elements from going over */
-    font-size:1.2rem;
+    font-size:1.6rem;
+    
+}
+.main_title_text {
+	font-family: "Adobe Garamond Pro", adobe-garamond-pro, "Times New Roman", times, serif;
+	font-style: normal;
+	font-weight: 200;
+    color: #161514;
+    margin-left: 10;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 3.8rem;
+    text-align: center;
+    padding-top: 4.0rem;
     
 }
 
@@ -46,7 +59,6 @@ body {
  
 #title_bar {
     display: block;
-    font-family:adobe-garamond-pro, times, serif; /* direct from FSU */
     width:100%;
     text-align: center;
     padding-top:3rem;
@@ -64,11 +76,13 @@ body {
 #div_nav a{ /* individual anchor items */
    
     height:5rem;
-    width:15rem;
-    margin:12rem;
+    width:5rem;
+    margin:1.2rem;
     text-align: center;
     padding:1rem .5rem;
-    
+    text-decoration: none;
+    color:black;
+    line-height: 2.16rem;
 }
 #div_nav a:hover {
     background-color: lightgray;
@@ -99,7 +113,7 @@ body {
 
 #main_content_1_2 
 {
-    height: 90vh; width: 100%;
+    height: 72vh; width: 100%;
     background-color: #F4F4F4;
 }
 
@@ -112,7 +126,7 @@ body {
       
 #content_1_top_left
 {
-    height: 45vh; width: 50%;
+    height: 30vh; width: 50%;
     float: left;
 }
 #content_1_top_right {
@@ -123,17 +137,18 @@ body {
 }
 #content_1_top_right_text
 {
-  
-  margin: 10rem; 
+  font-size: 2.369rem;
   padding:5rem;
+  font-weight: 200;
   
 }
 
 #content_1_bottom
 {
-    height: 35vh; width: 90%;
-    position: absolute; 
-    left: 5%; margin-top: 50vh;
+   
+    width: 90%;
+    position: absolute;
+    left: 5%; margin-top: 45vh;
 }
 /* start of div image boxes */
 .float_left {
@@ -144,41 +159,56 @@ body {
 }
 
 #content_1_bottom_one {
-    height: 35vh; width: 16.6666666667%;
+    height: 17.5vh; width: 16.6666666667%;
     background-color: #F4F4F4;
+    line-height: 2.1324rem;
+    font-size:1.2rem;
+    margin-top:5rem;
+
 }
 #content_1_bottom_two {
-    height: 35vh; width: 16.6666666667%;
+    height: 17.5vh; width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_three {
-    height: 35vh; width: 16.6666666667%;
+    height: 17.5vh; width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_four {
-    height: 35vh; width: 16.6666666667%;
+    height: 17.5vh; width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_five{
-    height: 35vh; width: 16.6666666667%;
+    height: 17.5vh; width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_six {
-    height: 35vh; width: 16.6666666667%;
+    height: 17.5vh; width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 .small_pic {
-    height: 50%; width: 90%;
+    height: 30%; width: 90%;
     margin-left: 5%; margin-top: 10%;
-    background-color: pink;
 }
 .content_1_bottom_text {
-    height: 30%; width: 90%;
+    height: 50%; width: 90%;
     margin-left: 5%; 
+    margin-top:10rem;
+}
+.red_text{
+    color: #782f40;
+    font-weight: 600;
+}
+.red_text:hover{
+    color:#CEB888;
+}
+.bold{
+    font-weight:bold;
 }
 /* to get right of link underlines */
 a:hover, a:visited, a:link a:active, a {
     text-decoration: none;
+    color:#782f40; /* make links garnet color text */
 }
 
 a:hover {
@@ -190,47 +220,56 @@ a:hover {
 #main_content_3
 {
     height: 30vh; width: 100%;
-    background-color: black;
     margin:5rem;
 }
 #content_3_left
 {
     height: 30vh; width: 50%;
-    background-color: aquamarine;
     float: left;
 }
 #content_3_right
 {
     height: 30vh; width: 50%;
-    background-color: red;
     float: right;
 }
 #content_3_left_one{
     height: 30vh; width: 16.6666666667%;
-    background-color: red;
+   
     margin-left:30%;
 }
 #content_3_left_two{
     height: 30vh; width: 50%;
-    background-color: blue;
-    
 }
 
 #content_3_right_top{
 
-    height: 10vh; width: 100%;
-    background-color: pink;
+    height: 10vh; width: 80%;
     margin-top:-1.2rem; /* for alignment */
 }
 #content_3_right_bottom{
-    margin-top:13rem;
-    height: 5vh; width: 100%;
+    margin-top:12rem;
     background-color: white;
 }
 #centering_button {
     text-align: center;
     vertical-align:text-bottom;
 }
+.large_text{
+    font-size:3rem;
+}
+.center_text{
+    text-align: center;
+    margin-right:35rem;
+}
+.small_font_red_border{
+    margin-left:35rem;
+    font-size: 1.2rem;
+    border: 0.1rem solid #782f40;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display:inline; /* done so border will wrap around text instead of block */
+}
+
 
 /* start of content 4" */
 #main_content_4_border
@@ -238,7 +277,6 @@ a:hover {
     height: 35vh; width: 100%;
     background-color: #CEB888;
     padding:3rem;
-    
 }
 #main_content_4
 {
@@ -282,12 +320,12 @@ a:hover {
     height: 15vh; width: 30%;
     background-color:purple;
     position: absolute;
-    margin-top:11.5lrem;
+    margin-top:19.5rem;
 }
 /* start of content 5 */
 #content_5_main_outer{
     height: 35vh; width: 100%;
-    padding:30px;
+    padding:3.0rem;
 }
 #content_5_main{
     height: 30vh; width: 90%;
@@ -310,7 +348,7 @@ a:hover {
 #content_6_main_outer{
     height: 35vh; width: 100%;
     background-color: #F4F4F4;
-    padding:30px;
+    padding:3.0rem;
 }
 #content_6_main{
     height: 30vh; width: 90%;
