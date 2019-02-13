@@ -1,0 +1,145 @@
+* recall:
+Sentinel: special value that will stop a loop
+
+* user input:
+result = window.prompt("Enter result","0");
+ --> in this case, "0" is the default value for the prompt
+
+
+* pre/post decrement
+called unary as they only take one input
+++c -> before statement finishes
+c++ -> after statement is over
+
+** ++(x+1)
+note that you can't do this, it's actually an lvalue
+basically, only certain expressions are allowed on the left hand side
+(lvalue) and right hand side (rvalue)
+
+don't want the operation happening on the left hand side
+
+++(x+1) gives you ===
+ (x+1)=(x+1)+1
+
+
+you want no expressions in the left hand side
+
+* recall: triple equals
+use === as often as possible, == gives you trouble
+
+
+* NEXT SLIDESHOW
+
+* quotes
+javascript used double quotes, not single quotes
+
+* for loops
+** header 
+must have intialization, coniditon and increment expression
+for ( var counter = 1; counter>Size; counter++
+** required
+really the only thing required in for loops are the two semicolons
+don't need any of the above elements
+** scope
+part of script where variable can be used is called scope
+** wrong relational operator
+using <= or >= where you don't mean to is a logic error
+** math operator
+Can do stuff like Math.pow for exponents, pow object of Math class possiblY?
+* switch statement
+** syntax
+same as always, continues, breaks, etc
+defaults
+case "1":
+// do stuff
+* do...while
+loop body executes at least once
+do{
+
+shit
+} while ( counter <=6 );
+** continue vs break
+continue goes to next iteration of loop, "skips"
+break exists loop entirely
+* logical operators
+&& -> both sides must be true
+|| -> one side must be true
+** PRECDENCE
+*importantt, probably*
+&& has a higher precdence than ||
+
+/short circuit operation/ -> basically just using && or || in a statement
+** not
+! -> means opposite
+* boolean/nonboolean -> conversion
+nonboolean values can be converted to boolean true or false values
+it does conversion... by
+if you're 0 -> false
+anything not 0 -> true
+
+strings with characaters -> true
+empty strings -> false
+
+objects -> true
+null -> false
+
+
+
+
+* NEXT CHAPTER 
+
+* Functions
+large programs need to be /modulized/
+functions help do this, to divide and conquer
+
+* Objects and Methods
+** Objects
+Math.pow is an example -> the function it performs is a method
+objects include stuff for strings, date/time, array methods
+** methods and functions
+theyre different? I think?
+** functions
+write once, use many times
+function square(y)
+{
+return y * y;
+}
+
+// notice how you don't have to do a bunch of shit to declare a function //
+*** calling
+
+needs to be called explicity
+must put return value
+* Function calls
+function invoked via call
+analogy: boss (calling function) asks worker (called functions) to perform a task and report back (return)
+* Returning Control (returns)
+1. just put return
+2. return (expression)
+3. reaching end of function
+Note: NO return types. Loosely typed yo!
+but remember to parseFloat and parseInt stuff htat needs to be parsed when using them
+* variable
+variables declared with var are local variables (to their function)
+* good practices
+functions should be simple
+resuable
+vars should be local to it
+* Random Number Generation
+** random method
+*generates a floating-point number betwen 0.0, 1.0*
+(not including one)
+Math.random()
+* addEventListener ->
+window.addEventListener( "load", start, false);
+when first open webpage, run start
+called the "load" event
+will always be false for this class
+* Event-driver programming (Edp)
+occurs when user interacts with an element, script notified of event, script processes the event
+* Body and Form
+every form needs an action atrribute
+# -> means action will be done by current page itself
+<form action = "#">
+kind of recursive, doesn't process to something else
+
