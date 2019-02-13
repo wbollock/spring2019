@@ -374,25 +374,24 @@ a:hover {
 
 /* start of content 5 */
 #content_5_main_outer{
-    height: 35vh; width: 100%;
+    height: 25vh; width: 100%;
     padding:3.0rem;
 }
 #content_5_main{
-    height: 30vh; width: 90%;
-    background-color:aquamarine;
+    height: 20vh; width: 90%;
     margin:0 auto;
 }
 #content_5_left{
-    height:30vh; width:33.33333333%;
-    background-color: black;
+    height:20vh; width:33.33333333%;
+    
 }
 #content_5_middle{
-    height:30vh; width:33.33333333%;
-    background-color: gray;
+    height:20vh; width:33.33333333%;
+   
 }
 #content_5_right{
-    height:30vh; width:33.33333333%;
-    background-color: red;
+    height:20vh; width:33.33333333%;
+   
 }
 /* start of content 6 */
 #content_6_main_outer{
@@ -402,32 +401,29 @@ a:hover {
 }
 #content_6_main{
     height: 30vh; width: 90%;
-    background-color:aquamarine;
+    
     margin:0 auto;
 }
 #content_6_first {
     height: 35vh; width: 16.6666666667%;
-    background-color: white;
 }
 #content_6_second {
     height: 35vh; width: 16.6666666667%;
-    background-color: blue;
 }
 #content_6_third {
     height: 35vh; width: 16.6666666667%;
-    background-color: red;
 }
 #content_6_fourth {
     height: 35vh; width: 16.6666666667%;
-    background-color: purple;
 }
 #content_6_fifth{
     height: 35vh; width: 16.6666666667%;
-    background-color: red;
 }
 #content_6_six {
     height: 35vh; width: 16.6666666667%;
-    background-color: black;
+}
+.small_text{
+    font-size:1.2rem; /* for use with small links in content 6 */
 }
 /* start of content 7 */
 #content_7_outer{
@@ -440,22 +436,30 @@ a:hover {
 }
 /* start of footer */
 #footer_outer{
-    height: 10vh; width: 100%;
+    height: 12vh; width: 100%;
     background-color:#782F40;
 }
 #footer_main{
-    height: 10vh; width: 90%;
+    height: 12vh; width: 90%;
     margin: 0 auto;
 }
 #footer_1{
-    height: 5vh; width: 16.6666666667%;
+    height: 6vh; width: 16.6666666667%;
     margin-top: 1rem;
 }
 #footer_2{
-    height: 5vh; width: 16.6666666667%;
+    height: 6vh; width: 16.6666666667%;
     margin-top: 1rem;
 }
 #footer_3{
-    height: 5vh; width: 16.6666666667%;
+    height: 6vh; width: 16.6666666667%;
     margin-top: 1rem;
+}
+.white_text{
+    color: white;
+    font-weight: 600;
+}
+.gold_text{
+    color: #ceb888;
+    font-weight: 600;
 }
