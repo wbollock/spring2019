@@ -21,7 +21,6 @@ body {
 	font-style: normal;
 	font-weight: 200;
     color: #161514;
-    margin-left: 10;
     padding: 0;
     text-transform: uppercase;
     font-size: 3.8rem;
@@ -335,7 +334,7 @@ a:hover {
     left:3rem;
     
 }
-#column_boxes
+.column_boxes
 {
     position: relative;
     list-style: none;
@@ -347,7 +346,7 @@ a:hover {
     right: 40px;
     top: -30px;
 }
-#column_boxes:hover{
+.column_boxes:hover{
     border-color: #cbbb9a;
     background-color: #fafad2;
 }
@@ -360,13 +359,10 @@ a:hover {
     height:0.1vh;
     width:90%;
 }
-#red_button{
-    border: 0.1rem solid #782f40;
-    background-color: #782f40;
+.red_button{
+    background-color:#782F40;
     padding: 1rem;
-    color: white; /* sets text white, not button */
-    
-    
+    color: white; /* sets text white, not button */  
 }
 .margin_left{
     margin-left:18rem; /* only the right element needs to be moved to the right */
