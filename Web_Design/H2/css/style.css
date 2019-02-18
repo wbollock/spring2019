@@ -273,7 +273,7 @@ a:hover {
     width:37.5%;
     position: absolute;
     right:1rem;
-    left: 123rem;
+    left: 110rem;
    /* absolute positioning because content_4_right will be stuck at the bottom of the div with padding/margin */
 }
 #content_4_right {
