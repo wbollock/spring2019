@@ -1,0 +1,5 @@
+* addEventLister
+can do window.addEventListener( "load", start, false ); to start the function upon page load
+good for when waiting for someone to do something
+
+* 
