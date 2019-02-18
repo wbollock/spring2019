@@ -1,25 +1,25 @@
 // made by William Bollock, CGS 3066 A3
 
-// how do you call a function if the html is read only??
-
 // Change Size function
-//if button pressed, then...
-document.getElementById('size_btn').onclick = function() {
-    // window.alert("button was clicked"); (DEBUG TODO)
-    
+document.getElementById('size_btn').onclick = function () {
     // get inputs for width and height
-    // https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript
-    document.getElementByID('')
+    var heightVar = document.getElementById("height").value;
+    var widthVar = document.getElementById("width").value;
 
     // if user input height == X
     //then...
-    var heightVar;
-    document.getElementById("result").style.height = "heightVar" + "px";
 
-    //width
-    var widthVar;
-    document.getElementById("result").style.width = "widthVar" + "px";
-
-    
+    document.getElementById("result").style.height = heightVar + "px";
+    document.getElementById("result").style.width = widthVar + "px";
 
 };
+
+
+//Change Colors
+// user selects colors, "Change Colors" button will adjust row(s) to select colored
+document.getElementById('colors_btn').onclick = function () {
+    // need to be able to get the colors in an array of sort?
+    // maybe a loop could work here
+    // id's go from color_sel0 ++
+
+}
