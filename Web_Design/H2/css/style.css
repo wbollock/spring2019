@@ -1,61 +1,56 @@
 /* made by William Bollock, CGS 3066 H2 */
+/* built for 2560x1440 resolution */
 html{
-    overflow:scroll; /* TODO fix webpage not scrolling */
+    overflow:scroll;
     font-size: 10px;
 }
-
-
-
 body {
     margin: 0;
     padding: 0;
     font-family: "Benton Sans", Arial, sans-serif;
     font-style: normal;
     line-height: 1.777;
-    overflow:hidden; /* prevent certain elements from going over */
+    overflow:hidden;
+   /* prevent certain elements from going over */
     font-size:1.6rem;
-    
 }
 .main_title_text {
-	font-family: "Adobe Garamond Pro", adobe-garamond-pro, "Times New Roman", times, serif;
-	font-style: normal;
-	font-weight: 200;
+    font-family: "Adobe Garamond Pro", adobe-garamond-pro, "Times New Roman", times, serif;
+    font-style: normal;
+    font-weight: 200;
     color: #161514;
     padding: 0;
     text-transform: uppercase;
     font-size: 3.8rem;
     text-align: center;
     padding-top: 4.0rem;
-    
 }
-
 #icon-color {
-	margin: auto;
-	background: #782f40;
-	height: 4.5rem;
-	width: 100%;
+    margin: auto;
+    background: #782f40;
+    height: 4.5rem;
+    width: 100%;
 }
-
 #icon-container {
-	padding-right: 10rem;
-	padding-left: 10rem;
-	width: auto;
-	float: right; /* sticks to upper right */
+    padding-right: 10rem;
+    padding-left: 10rem;
+    width: auto;
+    float: right;
+   /* sticks to upper right */
 }
-
 #icons-menu > li {
-	display: inline;
+    display: inline;
     list-style: none;
-    position:relative; 
-    top:-2rem; /* moves element up, down from top */
+    position:relative;
+    top:-2rem;
+   /* moves element up, down from top */
 }
-
-#seal { /* for FSU seal */
-	position: absolute;
-	top: 0rem;
+#seal {
+   /* for FSU seal */
+    position: absolute;
+    top: 0rem;
     left: 45%;
 }
- 
 #title_bar {
     display: block;
     width:100%;
@@ -63,17 +58,15 @@ body {
     padding-top:3rem;
     padding-bottom:1.5rem;
 }
-
-
-#div_nav { /* navbar div */
+#div_nav {
+   /* navbar div */
     display: inline-block;
     text-align: center;
-    vertical-align:middle; 
+    vertical-align:middle;
     width:100%;
 }
-
-#div_nav a{ /* individual anchor items */
-   
+#div_nav a{
+   /* individual anchor items */
     height:5rem;
     width:5rem;
     margin:1.2rem;
@@ -86,112 +79,99 @@ body {
 #div_nav a:hover {
     background-color: lightgray;
 }
-
-
- /*
-#content_1 { 
-    display: flex;
-    width:100%;
-    height: 600px;
-    background: #CEB888;
-    padding-left:80px;
-    padding-right:80px;
-		
-}
-
-#content_1_img {
-    max-widht:100%;
-    height:20%;
-    object-fit:contain;
-    padding:10px;
-}
-#content_1_text {
-    margin:50px;
-}*/
-   
-
-#main_content_1_2 
-{
-    height: 72vh; width: 100%;
+/* start of content 1 and 2 - combined */
+#main_content_1_2 {
+    height: 72vh;
+    width: 100%;
     background-color: #F4F4F4;
 }
-
 #content_1_top {
-    height: 45vh; width: 90%;
-    position: absolute; 
-    left: 5%; margin-top: 5vh;
-    
+    height: 45vh;
+    width: 80%;
+    position: absolute;
+    left: 5%;
+    margin-top: 5vh;
 }
-      
-#content_1_top_left
-{
-    height: 30vh; width: 50%;
+#content_1_top_left {
+    height: 25vh;
+    width: 50%;
     float: left;
 }
 #content_1_top_right {
-    height: 37vh; width: 50%;
+    height: 33.5vh;
+    width: 50%;
     background-color: #F3EDE0;
     float: right;
-    
 }
-#content_1_top_right_text
-{
-  font-size: 2.369rem;
-  padding:5rem;
-  font-weight: 200;
-  
+#content_1_top_right_text {
+    font-size: 2.369rem;
+    padding:5rem;
+    font-weight: 200;
 }
-
-#content_1_bottom
-{
-   
-    width: 90%;
+/* text styling */
+#main_pic_title{
+    display: block;
+    font-size: 4rem;
+    font-weight: 200;
+}
+#paragraph_text{
+    font-weight:100;
+}
+#content_1_bottom {
+    width: 60%;
     position: absolute;
-    left: 5%; margin-top: 45vh;
+    left: 20%;
+    margin-top: 40vh;
 }
-/* start of div image boxes */
 .float_left {
     float: left;
 }
 .float_right {
     float:right;
 }
-
 #content_1_bottom_one {
-    height: 17.5vh; width: 16.6666666667%;
+    height: 17.5vh;
+    width: 16.6666666667%;
     background-color: #F4F4F4;
     line-height: 2.1324rem;
     font-size:1.2rem;
     margin-top:5rem;
-
 }
 #content_1_bottom_two {
-    height: 17.5vh; width: 16.6666666667%;
+    height: 17.5vh;
+    width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_three {
-    height: 17.5vh; width: 16.6666666667%;
+    height: 17.5vh;
+    width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_four {
-    height: 17.5vh; width: 16.6666666667%;
+    height: 17.5vh;
+    width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_five{
-    height: 17.5vh; width: 16.6666666667%;
+    height: 17.5vh;
+    width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 #content_1_bottom_six {
-    height: 17.5vh; width: 16.6666666667%;
+    height: 17.5vh;
+    width: 16.6666666667%;
     background-color: #F4F4F4;
 }
 .small_pic {
-    height: 30%; width: 90%;
-    margin-left: 5%; margin-top: 10%;
+    height: 30%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
 }
 .content_1_bottom_text {
-    height: 50%; width: 90%;
-    margin-left: 5%; 
+    height: 50%;
+    width: 90%;
+    margin-left: 5%;
     margin-top:10rem;
 }
 .red_text{
@@ -207,43 +187,43 @@ body {
 /* to get right of link underlines */
 a:hover, a:visited, a:link a:active, a {
     text-decoration: none;
-    color:#782f40; /* make links garnet color text */
+    color:#782f40;
+   /* make links garnet color text */
 }
-
 a:hover {
-        background-color: #CEB888; /* TODO: CHANGE? */
+    background-color: #CEB888;
 }
-
-
 /* start of content 3 */
-#main_content_3
-{
-    height: 30vh; width: 100%;
+#main_content_3 {
+    height: 30vh;
+    width: 100%;
     margin:5rem;
 }
-#content_3_left
-{
-    height: 30vh; width: 50%;
+#content_3_left {
+    height: 30vh;
+    width: 50%;
     float: left;
 }
-#content_3_right
-{
-    height: 30vh; width: 50%;
+#content_3_right {
+    height: 30vh;
+    width: 50%;
     float: right;
 }
 #content_3_left_one{
-    height: 30vh; width: 16.6666666667%;
-   
+    height: 30vh;
+    width: 16.6666666667%;
     margin-left:30%;
 }
 #content_3_left_two{
-    height: 30vh; width: 50%;
+    height: 30vh;
+    width: 50%;
+    margin-right:2rem;
 }
-
 #content_3_right_top{
-
-    height: 10vh; width: 80%;
-    margin-top:-1.2rem; /* for alignment */
+    height: 10vh;
+    width: 80%;
+    margin-top:-1.2rem;
+   /* for alignment */
 }
 #content_3_right_bottom{
     margin-top:12rem;
@@ -266,76 +246,63 @@ a:hover {
     border: 0.1rem solid #782f40;
     padding: 0.5rem;
     box-sizing: border-box;
-    display:inline; /* done so border will wrap around text instead of block */
+    display:inline;
+   /* done so border will wrap around text instead of block */
 }
-
-
 /* start of content 4" */
-#main_content_4_border
-{
-    height: 37vh; width: 100%;
+#main_content_4_border {
+    height: 37vh;
+    width: 100%;
     background-color: #F3EDE1;
     padding:3rem;
 }
-#main_content_4
-{
-    height: 30vh; width: 90%;
+#main_content_4 {
+    height: 30vh;
+    width: 70%;
     background-color: #F3EDE1;
     margin:0 auto;
 }
-#content_4_left
-{
+#content_4_left {
     float:left;
     height:30vh;
     width:25%;
-    
-    
-
 }
-#content_4_middle
-{
+#content_4_middle {
     float:left;
     height:30vh;
-    width:37.5%; 
-    
-    
-}
-#content_4_right
-{
-    float:right;
-    height:30vh;
     width:37.5%;
-    
-    
+    position: absolute;
+    right:1rem;
+    left: 123rem;
+   /* absolute positioning because content_4_right will be stuck at the bottom of the div with padding/margin */
 }
-#content_4_left_upper
-{
-    height: 15vh; width: 22.5%;
-    position: absolute; 
-    
-    
+#content_4_right {
+    float:right;
+    height:10vh;
+    width:37.5%;
 }
-#content_4_left_lower
-{
-    height: 15vh; width: 22.5%;
-    
+#content_4_left_upper {
+    height: 15vh;
+    width: 22.5%;
+    position: absolute;
+}
+#content_4_left_lower {
+    height: 15vh;
+    width: 22.5%;
     position: absolute;
     margin-top:19.5rem;
 }
 #content_4_left_lower_col1{
     height:15vh;
     width:50%;
-    
 }
 #content_4_left_lower_col2{
     height:15vh;
     width:50%;
     position: relative;
     left:3rem;
-    
 }
-.column_boxes
-{
+.column_boxes {
     position: relative;
     list-style: none;
     font-size: .75em;
@@ -350,10 +317,13 @@ a:hover {
     border-color: #cbbb9a;
     background-color: #fafad2;
 }
-#invisible_text{ /* makes text color same as background and thus 'invisible' */
-    color:#F3EDE1; /*this might seem stupid but it lets me keep spacing correct */
+#invisible_text{
+   /* makes text color same as background and thus 'invisible' */
+    color:#F3EDE1;
+   /*this might seem stupid but it lets me keep spacing correct */
 }
-#yellow_line{ /* divider between links and buttons */
+#yellow_line{
+   /* divider between links and buttons */
     margin-top:10rem;
     background-color:#CCCC00;
     height:0.1vh;
@@ -362,93 +332,111 @@ a:hover {
 .red_button{
     background-color:#782F40;
     padding: 1rem;
-    color: white; /* sets text white, not button */  
+    color: white;
+   /* sets text white, not button */
 }
 .margin_left{
-    margin-left:18rem; /* only the right element needs to be moved to the right */
+    margin-left:18rem;
+   /* only the right element needs to be moved to the right */
 }
-
 /* start of content 5 */
 #content_5_main_outer{
-    height: 25vh; width: 100%;
+    height: 25vh;
+    width: 100%;
     padding:3.0rem;
 }
 #content_5_main{
-    height: 20vh; width: 90%;
+    height: 20vh;
+    width: 73%;
     margin:0 auto;
 }
 #content_5_left{
-    height:20vh; width:33.33333333%;
-    
+    height:20vh;
+    width:33.33333333%;
 }
 #content_5_middle{
-    height:20vh; width:33.33333333%;
-   
+    height:20vh;
+    width:33.33333333%;
 }
 #content_5_right{
-    height:20vh; width:33.33333333%;
-   
+    height:20vh;
+    width:33.33333333%;
 }
 /* start of content 6 */
 #content_6_main_outer{
-    height: 35vh; width: 100%;
+    height: 35vh;
+    width: 100%;
     background-color: #F4F4F4;
     padding:3.0rem;
 }
 #content_6_main{
-    height: 30vh; width: 90%;
-    
+    height: 30vh;
+    width: 70%;
     margin:0 auto;
 }
 #content_6_first {
-    height: 35vh; width: 16.6666666667%;
+    height: 35vh;
+    width: 16.6666666667%;
 }
 #content_6_second {
-    height: 35vh; width: 16.6666666667%;
+    height: 35vh;
+    width: 16.6666666667%;
 }
 #content_6_third {
-    height: 35vh; width: 16.6666666667%;
+    height: 35vh;
+    width: 16.6666666667%;
 }
 #content_6_fourth {
-    height: 35vh; width: 16.6666666667%;
+    height: 35vh;
+    width: 16.6666666667%;
 }
 #content_6_fifth{
-    height: 35vh; width: 16.6666666667%;
+    height: 35vh;
+    width: 16.6666666667%;
 }
 #content_6_six {
-    height: 35vh; width: 16.6666666667%;
+    height: 35vh;
+    width: 16.6666666667%;
 }
 .small_text{
-    font-size:1.2rem; /* for use with small links in content 6 */
+    font-size:1.2rem;
+   /* for use with small links in content 6 */
 }
 /* start of content 7 */
 #content_7_outer{
-    height: 10vh; width: 100%;
+    height: 10vh;
+    width: 100%;
     background-color:#F4F4F4;
 }
 #content_7_main{
-    height: 10vh; width: 90%;
+    height: 10vh;
+    width: 70%;
     margin: 0 auto;
 }
 /* start of footer */
 #footer_outer{
-    height: 12vh; width: 100%;
+    height: 12vh;
+    width: 100%;
     background-color:#782F40;
 }
 #footer_main{
-    height: 12vh; width: 90%;
+    height: 12vh;
+    width: 70%;
     margin: 0 auto;
 }
 #footer_1{
-    height: 6vh; width: 16.6666666667%;
+    height: 6vh;
+    width: 16.6666666667%;
     margin-top: 1rem;
 }
 #footer_2{
-    height: 6vh; width: 16.6666666667%;
+    height: 6vh;
+    width: 16.6666666667%;
     margin-top: 1rem;
 }
 #footer_3{
-    height: 6vh; width: 16.6666666667%;
+    height: 6vh;
+    width: 16.6666666667%;
     margin-top: 1rem;
 }
 .white_text{
@@ -458,4 +446,17 @@ a:hover {
 .gold_text{
     color: #ceb888;
     font-weight: 600;
+}
+.section_divider {
+   /* small bar in between sections */
+    border-top: 0.1rem solid #D5D5D5;
+    border-bottom: 0.1rem solid lightgray;
+}
+.no_margin{
+    margin: 0rem;
+   /* for use on p tags with margins that will mess up formatting */
+}
+.link_no_color{
+    color:black !important;
+   /* !important to override other text link settings */
 }
