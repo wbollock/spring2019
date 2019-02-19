@@ -1,27 +1,23 @@
 // made by William Bollock, CGS 3066 A3
-
+/*
  If you want to retrieve the value that each one of the <input> or <select> elements capture (i.e.,
 the input entered by the user), first get a reference to the element using a querySelector, and
 then use the attribute/field value. Remember that such value is always returned as a string.
-
+TODO: DELETE ABOVE
 */
 
 // Change Size function
-document.getElementById('size_btn').onclick = function () {
+document.getElementById('size_btn').onclick = function () { // may want to switch htis to an event listener
     // get inputs for width and height
-    //var heightVar = document.getElementById("height").value;
-    //var heightVar = document.querySelector("div.subrow input[id='height]");
-    var heightVar = document.querySelector("#height.value");
+    var heightVar = document.querySelector("#height").value;
     var heightInt = parseInt(heightVar);
-    console.log(heightVar); 
-    console.log(heightInt);    // printing NaN 
     var widthVar = document.getElementById("width").value;
-
+    var widthInt = parseInt(widthVar);
     // if user input height == X
     //then...
 
-    document.getElementById("result").style.height = heightVar + "px";
-    document.getElementById("result").style.width = widthVar + "px";
+    document.getElementById("result").style.height = heightInt + "px";
+    document.getElementById("result").style.width = widthInt + "px";
 
 };
 

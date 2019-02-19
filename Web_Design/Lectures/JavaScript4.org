@@ -1,5 +1,95 @@
-* addEventLister
+* addEventListener
 can do window.addEventListener( "load", start, false ); to start the function upon page load
 good for when waiting for someone to do something
 
-* 
+*  HTML 5 audio element
+used to embed audio into a web page
+
+** preload
+auto is a good attribute for this. tells browser to download the audio clip so it's ready whenever the game needs it
+
+** formats
+type = "audio/mpeg"
+type = "audio/ogg"
+
+* HTML5 video elements
+i literally dont know what to say
+
+* Scope
+
+** global variables
+don't use them
+
+** local identifiers  
+those within a function are local
+
+* global functions
+there's an object called /global/
+this function has some vars and functions
+
+** examples
+isFinite
+isNaN
+parsefloat
+don't need to call object before, just do isFinite();
+
+* Recursion
+a recursive function calls /itself/
+recursive function can only solve the *base case*
+example being /factorial function/
+
+* Iteration
+iteration will use a repetition statement
+gradually approaches termination
+** iteration vs recursion
+recursion doesn't necessarily use a repetition statement, because it just calls itself instead
+recursion keeps going until base case is reached
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* NEXT LECTURE
+
+* JAVASCRIPT ARRAYS
+
+* Arrays
+data structures consisting of related items
+in JS, they're dynamic and can change size after they are created
+start at 0
+
+** .length
+every array in java know it's own length
+can use array.length() to find length
+
+** reallocation
+JS will automtaically reallocate the array when a value is an assigned to an "out of bounds" element
+
+** initializing array
+var n1 = new Array( 5 ); // array of size 5
+var n2 = new Array(); // empty array
+
+** intailizier list
+var n = [ 10, 20, 30, 40, 50 ];
+
+var undefined = [ 2, , , 8];
+those two empty elements will both be /undefined/
+
+* for in
+similar to enhanced for loop? / python
+
+for ( var element in theArray ) /element can be anything/
+{
+ // add values
+}
+
+will only select elements that are defined, *skips undefined elements in the array*
