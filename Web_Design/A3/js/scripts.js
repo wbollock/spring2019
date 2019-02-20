@@ -44,6 +44,8 @@ document.getElementById('colors_btn').onclick = function () {
     console.log(colorHex1);
 
     // if colorHex1.value !== null, then create another row and apply the next color?
-    document.getElementById("MyHeader").style.backgroundColor='red';
+   
+
+
 }
 
