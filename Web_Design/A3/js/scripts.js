@@ -36,8 +36,7 @@ function color () {
     {
         let colorHex = document.querySelector("#color_sel" + i).value; // succesfully prints subsequent values
        
-        if(numColors > 0)
-        {
+        
             new_div[i] = document.createElement('div'); // create div
             new_div[i].className = "result_row"; // assign new div the right class
             document.getElementById("result").appendChild(new_div[i]); // put the div under "result"
@@ -48,15 +47,18 @@ function color () {
             console.log(i);
 
             counter++; // counter variable tells height loop how many times to run
-        }
+        
     
+        
         // loop to apply height
-       for(let j=0; j<=counter; j++)
-        {
-            document.querySelectorAll(".result_row")[j].style.height = (100/(counter+1)) + "%";
-            console.log("Height loop runing" + j);
-        } // end of height loop
- 
+        if(numColors > 0){
+            for(let j=0; j<=counter; j++)
+                {
+                    document.querySelectorAll(".result_row")[j].style.height = (100/(counter+1)) + "%";
+                } // end of height loop
+        }
+
+        
         
     } // end of main for loop
 
