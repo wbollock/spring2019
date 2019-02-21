@@ -14,7 +14,7 @@ function size () {
     document.getElementById("result").style.height = heightInt + "px";
     document.getElementById("result").style.width = widthInt + "px";
 
-};
+}
 
 
 //Change Colors, user selects colors, "Change Colors" button will adjust row(s) to select colored
@@ -66,8 +66,47 @@ function color () {
 
 } // end of color function
 
+
+function border () {
+//need to apply border to result div
+// get inputs
+    let borderType = document.querySelector("#border_type").value;
+    let borderColor = document.querySelector("#border_color").value;
+    let borderWidth = document.querySelector("#border_width").value;
+
+    document.getElementById("result").style.border = borderType;
+    document.getElementById("result").style.borderColor = borderColor;
+    document.getElementById("result").style.borderWidth = borderWidth +"px";
+    
+    
+
+
+
+} // end of border function
+
+
+//extra credit -> making buttons
+{ // image needs to display in  "result" and stay in the borders
+let buttonDisplay = document.createElement("button");
+document.getElementById("result").appendChild(buttonDisplay);
+buttonDisplay.id = "display_btn";
+buttonDisplay.innerHTML = "Display Image";
+}
+
+function displayImage () {
+    // set image in result
+    let userImg = document.createElement("img");
+    userImg.src = "js/example.png";
+    let resultVar = document.querySelectorAll("result");
+    document.getElementById("result").insertBefore(userImg, resultVar.childNodes[0]);
+}
+
+
 // calling functions
 document.querySelector('#size_btn').addEventListener("click", size);
 
 document.querySelector('#colors_btn').addEventListener("click", color);
 
+document.querySelector('#border_btn').addEventListener("click", border);
+
+document.querySelector('#display_btn').addEventListener("click", displayImage);
