@@ -1,0 +1,146 @@
+* pass by value
+give the variable a value, a copy of another variable
+Numbers, Boolean values, and strings are examples
+/prevents accidental side effects/
+
+* TODO i could see a test question of pass by value vs pass by reference
+* pass by reference
+the place the variable is in memory
+can mprove performance, can eliminate overhead of /copying/ all that data
+but can *weaken secruity*
+*all objects* in JS are passed by reference
+not necessary to /return the object/
+* passing arrays
+arrays are objects in JS
+so, they are all passed by reference
+** scalars
+individual elements of an array
+all passed by value
+* join method of an array
+gives you a string that contains ALL elements of an array
+basically makes a string that can print the entire array
+** value vs erference
+PASSING BY VALUE: will NOT change the elements of the array, although they can temporarily modify them
+PASSING BY REFERENCE: will DEFINTELY change the value of the elements of the array
+** TODO above is probably a test question
+* Sorting Data
+putting data in a particular order
+** Array Sort Method
+takes a function name as it's argument
+array.sort( compareIntegers );
+*** returns:
+negative (if first argument < second argument)
+zero (if arguments are equal)
+positive value (if second argument > first)
+** Example
+man i have no clue what the damn example means
+* Searching Arrays
+lets say you're trying to find a certain element in an array
+var element = array.indexOf ( searchKey );
+finds /first occurence/
+* multidimensional arrays
+a [ 0 ][ 0 ];
+row then column?
+** intailizing
+var array1= [ [1, 2, 3 ], // row 0
+              [4, 5, 6 ] ]; // row 1
+** 
+** 
+** 
+** 
+* HOMEWORK INFO** 
+* Block
+a block/compound statement groups one or more things
+* var vs let vs const
+scope is the difference.
+var x = 15; // function scope variable
+let fruit = 'banana'; // block scope varaiable only
+const isHungry = true; // block scope constant, cannot be reassigned
+* functions
+do not need to be like
+function printMessage( var message, var times) {
+^^ DON'T NEED /VAR/ or anything
+correct:
+function printMessage(message, times) {
+for (var i =0; //other for loop shit)
+{
+// do stuff
+}
+console.log(i)
+
+*WILL VAR PRINT??*
+YES! because it has scope for the /whole function/ not just in the for loop
+* let
+same example as above w/ for loop
+function printMessage(message, times) {
+for (let i =0; //other for loop shit)
+{
+// do stuff
+}
+console.log(i)
+*WILL LET PRINT?*
+NO! because let only has block-level scope
+same w/ const
+* const
+not quite "constant"
+variables w/ const cannot be reassigned
+
+const y = 10;
+y = 0; *WRONG!*
+y++; *WRONG! ITS CONST*
+
+but if it's in an array...
+const list = [1, 2, 3];
+list.push(4); // *OK!* can add new elements to a const array
+* best practice
+use const as soon as possible
+*don't use var*
+if you need a reassignable variable, use *let*
+* types
+JS variables do not have types, but the /values/ do
+Boolean, Number (doubles not int), String (chars are 1 length strings), Symbol, Null, Undefined
+* Events
+User interacts withh something
+*event handler* executed upon a certain interaction
+* DOM
+a tree of nodes
+html -> head -> title
+     -> body -> h1
+             -> div -> p
+* event listeners 
+function onClick() {
+   console.log('clicked');
+}
+
+const button = document.querySelector('button');
+button.addEventListener('click', onClick);
+* accessing attributes of html elements
+const image = document.querySelector('img');
+image.src = 'new image path';
+* adding/removing classes
+image.classList.add('active'); adds a css class called active
+* more event listener
+const my_button = document.querySelector("button"); -> "button" can be elements or IDs
+mybu
+* querySelector
+can do more than just classes or IDs. can select all "img" or "p" tags
+can then assign all those "img" or "p" tags with a for loop
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* DOM MODEL
+you can manipulate CSS/HTML with JS with DOM 
+** document object
+represents your webpage
+always access document object first to access other HTML elements
+innerHTML used to change the whole HTML 
+** TODO use innerHTML to replace code
+** innerHTML
+literally changes code/text inside html elements
+let header = document.querySelector("h1");
