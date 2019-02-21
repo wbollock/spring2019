@@ -19,9 +19,6 @@ function size () {
 
 //Change Colors, user selects colors, "Change Colors" button will adjust row(s) to select colored
 function color () {
-    
-    // TODO: account for negative numbers
-
     const numColors = parseInt(document.querySelector("#num_colors").value);
     let new_div= new Array();
 
@@ -34,27 +31,32 @@ function color () {
 
     for(let i=1; i<Math.abs(numColors); i++) // sets colors to row
     {
-        let colorHex = document.querySelector("#color_sel" + i).value; // succesfully prints subsequent values
+            let colorHex = document.querySelector("#color_sel" + i).value; // succesfully prints subsequent values
        
-        
             new_div[i] = document.createElement('div'); // create div
             new_div[i].className = "result_row"; // assign new div the right class
             document.getElementById("result").appendChild(new_div[i]); // put the div under "result"
             
             new_div[i].style.backgroundColor = colorHex; // set color of new div
             new_div[i].style.display = "block";
-            //new_div[i].style.height = (100/(i+1)) + "%";
-            console.log(i);
 
             counter++; // counter variable tells height loop how many times to run
-        
-    
-        
-        // loop to apply height
-        if(numColors > 0){
+         
+        // loops to apply height
+
+        if(numColors > 0){ // positive numbers
             for(let j=0; j<=counter; j++)
                 {
-                    document.querySelectorAll(".result_row")[j].style.height = (100/(counter+1)) + "%";
+                    document.querySelectorAll(".result_row")[j].style.height = (100/(counter+1)) + "%"; // set height depending on number of elements
+                } // end of height loop
+        }
+    
+
+        if(numColors < 0){ // negative numbers
+            for(let j=0; j<=counter; j++)
+                {
+                    document.querySelectorAll(".result_row")[j].style.width = (100/(counter+1)) + "%";
+                    document.querySelectorAll(".result_row")[j].style.float = "left"; // float left to keep them in line. only vertical rows will need this
                 } // end of height loop
         }
 
