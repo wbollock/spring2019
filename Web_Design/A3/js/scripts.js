@@ -17,7 +17,8 @@ function size () {
 }
 
 
-//Change Colors, user selects colors, "Change Colors" button will adjust row(s) to select colored
+//Change Colors, user selects colors
+//"Change Colors" button will adjust row(s) to select colored
 function color () {
     const numColors = parseInt(document.querySelector("#num_colors").value);
     let new_div= new Array();
@@ -29,9 +30,13 @@ function color () {
 
     let counter=0;
 
-    for(let i=1; i<Math.abs(numColors); i++) // sets colors to row
+    for(let i=1; i<Math.abs(numColors); i++) 
+    // sets colors to row (abs for negative)
+    //for (let i in Math.abs(numColors)) for in attempt to replace for each
     {
-            let colorHex = document.querySelector("#color_sel" + i).value; // succesfully prints subsequent values
+            
+            let colorHex = document.querySelector("#color_sel" + i).value; 
+            // succesfully prints subsequent values
        
             new_div[i] = document.createElement('div'); // create div
             new_div[i].className = "result_row"; // assign new div the right class
@@ -88,17 +93,31 @@ function border () {
 //extra credit -> making buttons
 { // image needs to display in  "result" and stay in the borders
 let buttonDisplay = document.createElement("button");
-document.getElementById("result").appendChild(buttonDisplay);
+document.body.appendChild(buttonDisplay); // append button to bottom of document
 buttonDisplay.id = "display_btn";
 buttonDisplay.innerHTML = "Display Image";
 }
+
+
+/*Add two buttons at the end of the web page (exact location is up to you). When the user clicks the
+first button, the output div will display an image (you can choose any image you like). When the user
+clicks the second button, the image must disappear. The image must be strictly smaller than the
+output div (i.e., it should not overlap any side of the output div), and the border and size of the output
+div should not be altered in any way. */
 
 function displayImage () {
     // set image in result
     let userImg = document.createElement("img");
     userImg.src = "js/example.png";
+
+    /* create image
+    show it, set visiblity to full
+    upon hidden button press
+    set visiblity to hidden */
+    
     let resultVar = document.querySelectorAll("result");
-    document.getElementById("result").insertBefore(userImg, resultVar.childNodes[0]);
+    document.getElementById("result").insertBefore(userImg, resultVar.childNodes[0]); 
+    // want to insert before the first result row
 }
 
 
