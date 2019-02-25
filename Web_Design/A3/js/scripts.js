@@ -107,16 +107,6 @@ function border() {
 function displayImage() {
     // append div to result
     // easier to just rewrite html and shove row under result
-    /*
-    let divString = "<div class="result_row"> ";
-    let imgSrc = "<img src="js/example.png" id="userImage"";
-    let styleString = "style="height: 170px; width: 170px;";
-    let marginString = "margin: 10px;"</img> </div>";
-    let imgDiv = divString + imgSrc + styleString + marginString;
-    */
-    // seperated to avoid 80 character limit
-    // A3 problem = need imgDiv to have this long string
-    // need string to start with single quotes.
 
     let heightVar = document.querySelector("#height").value;
     let heightInt = parseInt(heightVar);
