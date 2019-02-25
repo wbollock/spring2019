@@ -90,7 +90,7 @@ function border() {
 
 //extra credit -> making buttons
 { // image needs to display in  "result" and stay in the borders
-// creating buttons
+    // creating buttons
     let buttonDisplay = document.createElement("button");
     document.body.appendChild(buttonDisplay);
     // append button to bottom of document
@@ -107,10 +107,32 @@ function border() {
 function displayImage() {
     // append div to result
     // easier to just rewrite html and shove row under result
-    let imgDiv = '<div class="result_row"> <img src="js/example.png" id="userImage" style="height: 170px; width: 170px; margin: 10px;"</img> </div>'
-    document.getElementById('result').innerHTML=imgDiv;     
-    // set height and width to be less than box default -> might want to make it dynamic
-    
+    /*
+    let divString = "<div class="result_row"> ";
+    let imgSrc = "<img src="js/example.png" id="userImage"";
+    let styleString = "style="height: 170px; width: 170px;";
+    let marginString = "margin: 10px;"</img> </div>";
+    let imgDiv = divString + imgSrc + styleString + marginString;
+    */
+    // seperated to avoid 80 character limit
+    // A3 problem = need imgDiv to have this long string
+    // need string to start with single quotes.
+
+    let heightVar = document.querySelector("#height").value;
+    let heightInt = parseInt(heightVar);
+
+    let widthVar = document.querySelector("#width").value;
+    let widthInt = parseInt(widthVar);
+
+
+    let imgDiv =
+    "<div class=\"result_row\"> <img src=\"js/example.png\" id=\"userImage\"" +
+    "style=\"height:" + (heightInt - 30) + "px;" +
+    "width: " + (widthInt - 30) + "px;" +
+    " margin: 10px;\"</img> </div>";
+    // subtracting 30 makes sure image does not overlap
+
+    document.getElementById("result").innerHTML = imgDiv;
 }
 
 function hideImage() { // hide previously created image
