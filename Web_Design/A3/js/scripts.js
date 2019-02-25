@@ -96,6 +96,14 @@ function border() {
     // append button to bottom of document
     buttonDisplay.id = "display_btn";
     buttonDisplay.innerHTML = "Display Image";
+
+    let buttonDisplayHide = document.createElement("button");
+    document.body.appendChild(buttonDisplayHide);
+    // append button to bottom of document
+    buttonDisplayHide.id = "hide_btn";
+    buttonDisplayHide.innerHTML = "Hide Image";
+
+
 }
 
 
@@ -109,16 +117,30 @@ function displayImage() {
     // set image in result
     let userImg = document.createElement("img");
     userImg.src = "js/example.png";
+    userImg.id = "userImage";
 
-    /* create image
-    show it, set visiblity to full
-    upon hidden button press
-    set visiblity to hidden */
+    document.getElementById("result").appendChild(userImg);
+    // works well but places it below the box
 
-    let resultVar = document.querySelectorAll("result");
-    document.getElementById("result").insertBefore(userImg, resultVar.childNodes[0]);
-    // want to insert before the first result row
+
+    // set height and width of image - must be smaller than box
+
+    let heightVar = document.querySelector("#height").value;
+    let heightInt = parseInt(heightVar);
+
+    let widthVar = document.querySelector("#width").value;
+    let widthInt = parseInt(widthVar);
+
+    userImg.style.height = (heightInt - 30) + "px";
+    userImg.style.width = (widthInt - 30) + "px";
+    
 }
+
+function hideImage() { // hide previously created image
+    document.getElementById("userImage").style.visiblity = "hidden";
+    console.log("Hide Image btn pressed"); // TODO: DELETE THIS DEBUG 
+}
+
 
 
 // calling functions
@@ -129,3 +151,5 @@ document.querySelector("#colors_btn").addEventListener("click", color);
 document.querySelector("#border_btn").addEventListener("click", border);
 
 document.querySelector("#display_btn").addEventListener("click", displayImage);
+
+document.querySelector("#hide_btn").addEventListener("click", hideImage);;
