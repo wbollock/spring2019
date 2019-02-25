@@ -109,6 +109,8 @@ function displayImage() {
     // easier to just rewrite html and shove row under result
     let imgDiv = '<div class="result_row"> <img src="js/example.png" id="userImage" style="height: 170px; width: 170px; margin: 10px;"</img> </div>'
     document.getElementById('result').innerHTML=imgDiv;     
+    // set height and width to be less than box default -> might want to make it dynamic
+    
 }
 
 function hideImage() { // hide previously created image
