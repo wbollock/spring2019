@@ -84,7 +84,7 @@ function border() {
 
         document.getElementById("result").style.border = borderType;
         document.getElementById("result").style.borderColor = borderColor;
-        document.getElementById("result").style.brdrWidth = brdrWidth + "px";
+        document.getElementById("result").style.borderWidth = brdrWidth + "px";
 
     } // end of border function
 
