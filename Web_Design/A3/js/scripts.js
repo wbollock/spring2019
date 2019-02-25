@@ -88,9 +88,9 @@ function border() {
 
     } // end of border function
 
-
 //extra credit -> making buttons
 { // image needs to display in  "result" and stay in the borders
+// creating buttons
     let buttonDisplay = document.createElement("button");
     document.body.appendChild(buttonDisplay);
     // append button to bottom of document
@@ -102,50 +102,13 @@ function border() {
     // append button to bottom of document
     buttonDisplayHide.id = "hide_btn";
     buttonDisplayHide.innerHTML = "Hide Image";
-
-
 }
 
-
-/*Add two buttons at the end of the web page (exact location is up to you). When the user clicks the
-first button, the output div will display an image (you can choose any image you like). When the user
-clicks the second button, the image must disappear. The image must be strictly smaller than the
-output div (i.e., it should not overlap any side of the output div), and the border and size of the output
-div should not be altered in any way. */
-
 function displayImage() {
-    // set image in result
-    let userImg = document.createElement("img");
-    userImg.src = "js/example.png";
-    userImg.id = "userImage";
-    
-
-    //document.getElementById("result").appendChild(userImg);
-    // works well but places it below the box
-    // literally need to place it inside the result_row div
-
     // append div to result
+    // easier to just rewrite html and shove row under result
     let imgDiv = '<div class="result_row"> <img src="js/example.png" id="userImage" style="height: 170px; width: 170px; margin: 10px;"</img> </div>'
-    document.getElementById('result').innerHTML=imgDiv; 
-    console.log("displayImage selected");
-
-    //document.getElementById("result").appendChild(imgDiv); // append result row div
-    
-
-    // set height and width of image - must be smaller than box
-/*
-    let heightVar = document.querySelector("#height").value;
-    let heightInt = parseInt(heightVar);
-
-    let widthVar = document.querySelector("#width").value;
-    let widthInt = parseInt(widthVar);
-
-    userImg.style.height = (heightInt - 30) + "px";
-    userImg.style.width = (widthInt - 30) + "px";
-    userImg.style.margin = 10 + "px"; // center image slightly
-    */
-
-    
+    document.getElementById('result').innerHTML=imgDiv;     
 }
 
 function hideImage() { // hide previously created image
