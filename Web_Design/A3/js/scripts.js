@@ -118,13 +118,22 @@ function displayImage() {
     let userImg = document.createElement("img");
     userImg.src = "js/example.png";
     userImg.id = "userImage";
+    
 
-    document.getElementById("result").appendChild(userImg);
+    //document.getElementById("result").appendChild(userImg);
     // works well but places it below the box
+    // literally need to place it inside the result_row div
 
+    // append div to result
+    let imgDiv = '<div class="result_row"> <img src="js/example.png" id="userImage" style="height: 170px; width: 170px; margin: 10px;"</img> </div>'
+    document.getElementById('result').innerHTML=imgDiv; 
+    console.log("displayImage selected");
+
+    //document.getElementById("result").appendChild(imgDiv); // append result row div
+    
 
     // set height and width of image - must be smaller than box
-
+/*
     let heightVar = document.querySelector("#height").value;
     let heightInt = parseInt(heightVar);
 
@@ -133,12 +142,14 @@ function displayImage() {
 
     userImg.style.height = (heightInt - 30) + "px";
     userImg.style.width = (widthInt - 30) + "px";
+    userImg.style.margin = 10 + "px"; // center image slightly
+    */
+
     
 }
 
 function hideImage() { // hide previously created image
-    document.getElementById("userImage").style.visiblity = "hidden";
-    console.log("Hide Image btn pressed"); // TODO: DELETE THIS DEBUG 
+    document.getElementById("userImage").style.visibility = "hidden";
 }
 
 
