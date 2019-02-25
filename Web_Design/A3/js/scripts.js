@@ -31,29 +31,29 @@ function color() {
 
         for (let i = 1; i < Math.abs(numColors); i++)
         // sets colors to row (abs for negative)
-        //for (let i in Math.abs(numColors)) for in attempt to replace for each
         {
 
             let colorHex = document.querySelector("#color_sel" + i).value;
             // succesfully prints subsequent values
 
             new_div[i] = document.createElement("div"); // create div
-            new_div[i].className = "result_row"; 
+            new_div[i].className = "result_row";
             // assign new div the right class
-            document.getElementById("result").appendChild(new_div[i]); 
+            document.getElementById("result").appendChild(new_div[i]);
             // put the div under "result"
 
             new_div[i].style.backgroundColor = colorHex; // set color of new div
             new_div[i].style.display = "block";
 
-            counter++; 
+            counter++;
             // counter variable tells height loop how many times to run
 
             // loops to apply height
 
             if (numColors > 0) { // positive numbers
                 for (let j = 0; j <= counter; j++) {
-                    document.querySelectorAll(".result_row")[j].style.height = (100 / (counter + 1)) + "%"; 
+                    let resultArray = document.querySelectorAll(".result_row");
+                    resultArray[j].style.height = (100 / (counter + 1)) + "%";
                     // set height depending on number of elements
                 } // end of height loop
             }
@@ -61,9 +61,10 @@ function color() {
 
             if (numColors < 0) { // negative numbers
                 for (let j = 0; j <= counter; j++) {
-                    document.querySelectorAll(".result_row")[j].style.width = (100 / (counter + 1)) + "%";
-                    document.querySelectorAll(".result_row")[j].style.float = "left";
-                     // float left to keep them in line. only vertical rows will need this
+                    let resultArray = document.querySelectorAll(".result_row");
+                    resultArray[j].style.width = (100 / (counter + 1)) + "%";
+                    resultArray[j].style.float = "left";
+                    // float left to keep them in order, only vertical rows
                 } // end of height loop
             }
 
@@ -79,14 +80,11 @@ function border() {
         // get inputs
         let borderType = document.querySelector("#border_type").value;
         let borderColor = document.querySelector("#border_color").value;
-        let borderWidth = document.querySelector("#border_width").value;
+        let brdrWidth = document.querySelector("#border_width").value;
 
         document.getElementById("result").style.border = borderType;
         document.getElementById("result").style.borderColor = borderColor;
-        document.getElementById("result").style.borderWidth = borderWidth + "px";
-
-
-
+        document.getElementById("result").style.brdrWidth = brdrWidth + "px";
 
     } // end of border function
 
@@ -94,7 +92,7 @@ function border() {
 //extra credit -> making buttons
 { // image needs to display in  "result" and stay in the borders
     let buttonDisplay = document.createElement("button");
-    document.body.appendChild(buttonDisplay); 
+    document.body.appendChild(buttonDisplay);
     // append button to bottom of document
     buttonDisplay.id = "display_btn";
     buttonDisplay.innerHTML = "Display Image";
