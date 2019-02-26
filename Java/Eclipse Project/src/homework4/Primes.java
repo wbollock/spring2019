@@ -7,7 +7,7 @@ public class Primes {
 	public static boolean isPrime (int primeNum) {
 		// method will return true if primeNum is prime, false if not
 		
-		for(int i = 2; i <= primeNum/2; ++i)
+		for(int i = 2; i <= primeNum/2; ++i) // see wjat numbers it is divisible by
         {
             if(primeNum % i == 0)
             {

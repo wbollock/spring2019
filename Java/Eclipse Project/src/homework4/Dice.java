@@ -66,16 +66,18 @@ public class Dice {
 		
 		double twoSumRate = (twoSum / timesRolled) * 100.00; // * 100 to get right percentage
 		System.out.println("Snake eyes (double 1s) appeared");
-		System.out.println("\t" + twoSum + " times");
-		System.out.printf("%.2f %% of the time", twoSumRate );
+		System.out.printf("\t%.0f times", twoSum); // exactly as sample output
+		System.out.println("");
+		System.out.printf("\t%.2f %% of the time", twoSumRate );
 
 		System.out.println("");
 		System.out.println("");
 		
 		double sevenSumRate = (sevenSum / timesRolled) * 100.00; // * 100 to get right percentage
 		System.out.println("A roll of 7 appeared");
-		System.out.println("\t" + sevenSum + " times");
-		System.out.printf("%.2f %% of the time", sevenSumRate );
+		System.out.printf("\t%.0f times", sevenSum);
+		System.out.println("");
+		System.out.printf("\t%.2f %% of the time", sevenSumRate );
 	}
 
 }
