@@ -24,39 +24,58 @@ public class Dice {
 		Random rand = new Random(); // random object
 		for(int i =1; i < 6; i++)
 		{
-		diceRoll1 = rand.nextInt(5) + 1; // +1 to avoid 0, 5 to avoid a 7 dice roll
+		diceRoll1 = rand.nextInt(6) + 1; // +1 to avoid 0
 		}
 		
 		//Method 2 with Math.random()
 		for(int i=1; i < 6; i++)
 		{
-			diceRoll2 = (int) (Math.random() * 6) + 1; 
+			diceRoll2 = (int) (Math.random() * 6 + 1); 
 		}
 				
 		total = diceRoll1 + diceRoll2;
 		return total;
-	}
+	} // end of Roll Dice
 	
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int diceTotal = rollDice();
-		System.out.println("dice total is: " + diceTotal);
 		
-		System.out.print("How many times would you like to roll the two dice?");
+		System.out.print("How many times would you like to roll the two dice? ");
 		Scanner sc = new Scanner(System.in);
-		int timesRolled = sc.nextInt();
+		double timesRolled = sc.nextDouble();
 		// for loop w/ dice total, maybe
 		
-		for(int i =0; i<timesRolled; i++);
-		{
-			// count how many times 2 and 7 appear
-			// if 2 appears, add to snake eyes counter
-			// divide counter by times rolled
+		double twoSum=0;
+		double sevenSum=0;
 			
+		int i = 0;
+		while( i < timesRolled) {
+		
+			double diceTotal = rollDice();
+			if ( diceTotal == 2 ) {
+				twoSum = twoSum + 1;
+			}
+			else if( diceTotal == 7) {
+				sevenSum = sevenSum + 1;
+			}
+			i++;
 		}
-		System.out.println("Snake eyes double 1s appeared");
+		
+		System.out.println("");
+		
+		double twoSumRate = (twoSum / timesRolled) * 100.00; // * 100 to get right percentage
+		System.out.println("Snake eyes (double 1s) appeared");
+		System.out.println("\t" + twoSum + " times");
+		System.out.printf("%.2f %% of the time", twoSumRate );
+
+		System.out.println("");
+		System.out.println("");
+		
+		double sevenSumRate = (sevenSum / timesRolled) * 100.00; // * 100 to get right percentage
+		System.out.println("A roll of 7 appeared");
+		System.out.println("\t" + sevenSum + " times");
+		System.out.printf("%.2f %% of the time", sevenSumRate );
 	}
 
 }
