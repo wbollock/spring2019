@@ -1,0 +1,21 @@
+* deployment descriptor
+something about web.xml
+dd
+* semantic elements
+new to html5
+nav, sections, etc
+* paramValues
+method in Java to get all paramter values for all controls on the webpage
+* doget method
+You should use doGet() when you want to intercept on HTTP GET requests. 
+* cookies
+used to skip login process
+used for ads and banners
+* where are classes stored
+WEB-INF/classes
+* what will always be returned back to client?
+html
+* JPA
+java API for working with databases
+* url rewriting
+know this one
