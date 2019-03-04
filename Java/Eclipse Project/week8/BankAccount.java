@@ -1,4 +1,3 @@
-
 /*BANK ACCOUNT program, CGS3416
  * Will Bollock
  * web15c
@@ -19,6 +18,9 @@ public class BankAccount
   public BankAccount(String n)		
   {
      /*YOUR CODE HERE*/
+	  //should intialize both name and balance
+	  name = n; // account name equal to paramter
+	  balance = 0.0;
 	 
 	 
   }
@@ -29,7 +31,11 @@ public class BankAccount
   public BankAccount(String n, double b)   
   {
     /*YOUR CODE HERE*/
-	
+	name = n;
+	if (b < 0) // if balance is negative, reset to 0.00
+		balance = 0.00;
+	else
+		balance = b;
 	
 	
   }
@@ -38,6 +44,7 @@ public class BankAccount
   public double getBalance()		
   {
      /*YOUR CODE HERE*/
+	  return balance;
   }
 
   /*Method that should calculate and set new balance of account. It should be 
@@ -46,11 +53,11 @@ public class BankAccount
   public void deposit(double d)		
   {
 	 /*YOUR CODE HERE*/
-	 
-	 
-	 
-	 
-	 
+	 if(d > 0)
+		 balance = d + balance; // deposit adds to balance
+	 else
+		 System.out.println("Cannot deposit a negative amount..."); 
+	 // do not add to balance if negative
 	 
   }
   
@@ -63,12 +70,19 @@ public class BankAccount
   public void withdraw(double w)	
   {
         /*YOUR CODE HERE*/
-	 
-	 
-	 
-	 
-	 
-	 
+	 if( w < 0)
+		 System.out.println("Cannot withdraw a negative amount");
+	 else if ( w > balance )
+	 {
+		 System.out.printf("Your account balance is only $%.2f -- you cannot withdraw $ %.2f" ,balance,w);
+		 System.out.println("");
+	 }
+	 else {
+		 balance = balance - w;
+	 	 System.out.printf("Withdrawing... $%.2f", w);
+	 	 System.out.println("");
+	 }
+	
  }
   
   /*Method that prints out the account details/balance to the screen
@@ -77,11 +91,8 @@ public class BankAccount
   {
 	/*YOUR CODE HERE*/
 		
-		
-		
-		
-		
-		
+		System.out.printf("%s Current Balance : $ %.2f", name, balance);
+		System.out.println(""); // formatting
   }
   
   /*MAIN PROGRAM THAT WILL TEST THE METHODS OF THE CLASS YOU'VE WRITTEN ABOVE. 
