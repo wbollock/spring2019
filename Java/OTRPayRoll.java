@@ -5,6 +5,7 @@ import java.util.*;
 public class OTRPayRoll {
     public static void main(String[] args) {
     	OTRPayRollEncap encap = new OTRPayRollEncap(); // getters and setters
+    	// encapusulation
     	
     	   String dummyString = "";
            double milePay = 0.55;
