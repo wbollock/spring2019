@@ -1,0 +1,67 @@
+* Nodes
+before appending Nodes, you have to create one first
+
+var newNode = createNewNode(document.getElementById(xxxx).value );
+* DOM collections
+lets say you want to get ALL links on the webpage
+
+var linksList = document.links; // get all links on the webpage
+
+gives an array
+** accessing t
+var currentLink = linksList[4]
+** TODO .item operator WILL BE TESTED ON ITEM OPERATOR
+var currentLink = linksList.item(4);
+** methods for collections
+*** namedItem
+give it element id, spits out element w/ id in that collection
+* JavaScript animations
+gradual changes in elements over time
+* anonymous function
+has no name
+never called so has no name
+* setInterval
+interval = window.setInterval( "run()", 10);
+run -> will run() repeatedly
+10 -> how often to execute the run()', in *milliseconds*
+* TODO above will probably be on test
+*
+* clearInterval
+keep running it, do it this many times
+once a counter var = a certain amount, run clearInterval, it will close the animation
+* setTimeout and clearTimeout
+same as setInterval and clearInterval
+execept Timeout only executed once
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* load event vs inline
+idk i missed it
+* mouseMove event
+occurs when user moves mouse over web page
+* button Keys
+have properties like ctrlKey and shiftKey -> boolean true/false if key is pressed
+* mouse stuff
+mouseover and mouseout
+entering an element, /mouseover/
+leaving an element, /mouseout/
+* Focus
+fires when an element gains focus (use Tab key, clicks form field)
+* Blur event
+when something leaves focus, it is blurred
+* submit and reset
+myForm.addEventListener( "submit", function() { // you sure you want to submit?? } *NOTE: anonymous function }
+reset is the same way. upon submit/reset, do shit on form
+* Event Bubbling
+process where events fired on child elements "bubble" / cascade up to parent elemtns
+should all event listeners be "fired", or only child? etc
+** order
+FIRST goes to element's event handler
+then to parents
+** cancelling
+can use cancelBubble property to cancel this to prevent the cascade
+if you forget to cancel, may lead to unintended actions
