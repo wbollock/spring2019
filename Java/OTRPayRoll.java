@@ -2,13 +2,18 @@
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
-public class OTRPayRoll {
 
-    interface createFile {
+class payRate { // inheritance
+ static double milePay = 0.55;
+}
+
+public class OTRPayRoll extends payRate {
+
+    interface createFile { // interface
         public void writeFile(String fileName, String empName, double empTips, double empHours, double TotalPay, double empMiles);
     }
 
-    static class PrintingInfo implements createFile {
+    static class PrintingInfo implements createFile { // hides object details
         public void writeFile(String fileName, String empName, double empTips, double empHours, double TotalPay, double empMiles) {
             try{
              FileWriter fstream = new FileWriter(fileName,true);
@@ -25,10 +30,11 @@ public class OTRPayRoll {
             }
              catch (Exception e) 
                         { // FileNotFoundException ex
-                            
                             System.err.println("Error while writing to file: " + e.getMessage());
                         }
         }
+
+
     }
     public static void main(String[] args) {
     	OTRPayRollEncap encap = new OTRPayRollEncap(); // getters and setters
@@ -36,7 +42,7 @@ public class OTRPayRoll {
     	PrintingInfo writeObject = new PrintingInfo();
 
     	   String dummyString = "";
-           double milePay = 0.55;
+          
            double empTotPay;
 
     
@@ -76,29 +82,7 @@ public class OTRPayRoll {
           
             writeObject.writeFile(encap.getFileName(), encap.getEmpName(), encap.getEmpTips(), encap.getEmpHours(), empTotPay, 
                             encap.getEmpMiles());
-                        /*try{
-                        // Creating a File object that represents the disk file. 
-                        PrintStream o = new PrintStream(new File("A.txt"), true); 
-                        
-                            writeObject.writeFile(encap.getFileName(), encap.getEmpName(), encap.getEmpTips(), encap.getEmpHours(), empTotPay, 
-                            encap.getEmpMiles());
-
-                           /* FileWriter fstream = new FileWriter(encap.getFileName(),true);
-                            BufferedWriter out = new BufferedWriter(fstream);
-                            out.write(encap.getEmpName() + " made $" + empTotPay);
-                            out.newLine();
-                            out.write(encap.getEmpName()  + " had " + encap.getEmpHours() + " hours, $" + encap.getEmpTips() + 
-                            		" tips, and " + encap.getEmpMiles() + " miles.");
-                            out.newLine();
-                            out.write("------------------------------------");
-                            out.newLine();
-                            out.close();
-                            }
-                        catch (Exception e) 
-                        { // FileNotFoundException ex
-                            
-                            System.err.println("Error while writing to file: " + e.getMessage());
-                        }*/
+                      
 
 
                         
