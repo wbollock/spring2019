@@ -1,0 +1,75 @@
+* Starting with Project Info
+
+* Animated Progress Bar
+/meter/ is a bad way to indicate progress completion of a form
+1. on button click, start setInterval
+2. setInterval does the function frame every 10 ms
+3. in frame, if width=100%, then stop/remove timer with clearInterval
+4. if not, add 1% to width of progres bar. 
+Remember that it calls this every 10ms, so it adds 1% width every 10 ms
+
+** global vars
+we need global vars to do this because it's across functions
+width would reset every time if not
+
+* JS validation
+
+* TODO for test
+know "true tables"
+OR
+AND
+&&
+idk
+
+* backend
+
+* key=value
+key value pairs
+?source=hp&q=javascript
+source /is the key/
+hp /hp is the value/
+
+* get method
+can be bookmarked/saved, not secure, remains in browser history
+just for requesting data, not modifying it
+
+* post method
+used to send data to a server
+/URL DOES NOT CONTAIN THE QUERY OR DATA/
+different than get method
+
+* HTTP response
+1 of 2 things
+1. browser puts new html code in the page (chat room)
+2. brwoser sends you two different web page (login page)
+** header
+information for the browser
+** payload
+data displayed to the user
+HTML code, JSON data, etc
+** browser takes action
+uses header and payload to render new web page
+* 
+* 
+* 
+* Express
+* Node.js
+JS runtime framework - can use JS outside of a browser
+** npm
+package manager
+** Express
+expres.js is a web framework for node.js
+** GET HANDLER
+1. resource
+2. middleware function
+*** resource
+"/"
+is the root of the website, www.google.com means www.google.com/
+our case, it is the current directory
+*** middleware function
+function (req, res)
+req - request the handler recievies
+res - response the handler sends out
+
+
+
