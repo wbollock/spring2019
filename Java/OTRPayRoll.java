@@ -1,4 +1,7 @@
 //Made by Will bollock
+// note for OVERLOADING/OVERRIDING
+// https://beginnersbook.com/2014/01/difference-between-method-overloading-and-overriding-in-java/
+// can use overloading for adding pay
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
