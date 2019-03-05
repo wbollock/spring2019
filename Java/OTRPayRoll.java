@@ -3,13 +3,42 @@ import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
 public class OTRPayRoll {
+
+    interface createFile {
+        public void writeFile(String fileName, String empName, double empTips, double empHours, double TotalPay, double empMiles);
+    }
+
+    static class PrintingInfo implements createFile {
+        public void writeFile(String fileName, String empName, double empTips, double empHours, double TotalPay, double empMiles) {
+            try{
+             FileWriter fstream = new FileWriter(fileName,true);
+                            BufferedWriter out = new BufferedWriter(fstream);
+                            out.write(empName + " made $" + TotalPay);
+                            out.newLine();
+                            out.write(empName  + " had " + empHours + " hours, $" + empTips + 
+                            		" tips, and " + empMiles + " miles.");
+                            out.newLine();
+                            out.write("------------------------------------");
+                            out.newLine();
+                            out.close();
+
+            }
+             catch (Exception e) 
+                        { // FileNotFoundException ex
+                            
+                            System.err.println("Error while writing to file: " + e.getMessage());
+                        }
+        }
+    }
     public static void main(String[] args) {
     	OTRPayRollEncap encap = new OTRPayRollEncap(); // getters and setters
     	// encapusulation
-    	
+    	PrintingInfo writeObject = new PrintingInfo();
+
     	   String dummyString = "";
            double milePay = 0.55;
            double empTotPay;
+
     
         
         Scanner sc = new Scanner(System.in);
@@ -44,26 +73,17 @@ public class OTRPayRoll {
             
             empTotPay = (Math.round(((encap.getEmpHours() * encap.getPayRate()) + 
             		(encap.getEmpMiles() * milePay) + encap.getEmpTips())* 10000d) / 10000d);
-            // rounding to 2 decimal places
-            /*DecimalFormat df = new DecimalFormat("#.##");
-            empTotPay = df.format(empTotPay);*/
-            //encap.setEmpTotPay = (Math.round((encap.getEmpTotPay() * 10000d)) / 10000d);
-
-                        try{
-                        /*// Creating a File object that represents the disk file. 
+          
+            writeObject.writeFile(encap.getFileName(), encap.getEmpName(), encap.getEmpTips(), encap.getEmpHours(), empTotPay, 
+                            encap.getEmpMiles());
+                        /*try{
+                        // Creating a File object that represents the disk file. 
                         PrintStream o = new PrintStream(new File("A.txt"), true); 
-                
-                        // Store current System.out before assigning a new value 
-                        PrintStream console = System.out; 
-
-                        // Assign o to output stream 
-                        System.setOut(o); 
-                        System.out.println(empName + " made $" + empTotPay);
                         
-                        //set output back to console
-                        System.setOut(console);*/
+                            writeObject.writeFile(encap.getFileName(), encap.getEmpName(), encap.getEmpTips(), encap.getEmpHours(), empTotPay, 
+                            encap.getEmpMiles());
 
-                            FileWriter fstream = new FileWriter(encap.getFileName(),true);
+                           /* FileWriter fstream = new FileWriter(encap.getFileName(),true);
                             BufferedWriter out = new BufferedWriter(fstream);
                             out.write(encap.getEmpName() + " made $" + empTotPay);
                             out.newLine();
@@ -76,9 +96,9 @@ public class OTRPayRoll {
                             }
                         catch (Exception e) 
                         { // FileNotFoundException ex
-                            //System.out.println("Some sort of error occured with writing to the text file.");
+                            
                             System.err.println("Error while writing to file: " + e.getMessage());
-                        }
+                        }*/
 
 
                         
