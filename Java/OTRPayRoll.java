@@ -39,30 +39,35 @@ public class OTRPayRoll extends payRate {
 
 
     }
+    
+    static abstract class userInfo{ // abstraction -> static for objects
+    	abstract void introText(); // method for printing user info
+    	abstract void payrollText(); // name of payroll file
+    	abstract void numEmployees();
+    }
+    
+    static class printText extends userInfo{
+        void introText(){System.out.println("Welcome to the OTR Payroll program.");}
+        void payrollText(){System.out.println("Please enter the name of the payroll text file:");}
+        void numEmployees(){System.out.println("Please enter the number of employees on this payroll:");}        
+    }
     public static void main(String[] args) {
     	OTRPayRollEncap encap = new OTRPayRollEncap(); // getters and setters
     	// encapusulation
     	PrintingInfo writeObject = new PrintingInfo();
-
-    	   String dummyString = "";
-          
-           double empTotPay;
-
+    	userInfo textOutput = new printText();
     
-        
+    	String dummyString = "";
+        double empTotPay;
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Welcome to the OTR Payroll program.");
-        System.out.println("Please enter the name of the payroll text file:");
+        
+    	textOutput.introText(); // intro text
+    	
+    	textOutput.payrollText(); // name of file
         encap.setFileName(sc.nextLine()); 
         
-
-        System.out.println("Please enter the number of employees on this payroll:");
-        
+        textOutput.numEmployees(); // enter # of employees
         int numEmp = sc.nextInt();
-        
-        
-
 
         for(int i =0; i<numEmp; i++)
         {
