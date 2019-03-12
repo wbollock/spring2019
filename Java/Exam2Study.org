@@ -1,0 +1,97 @@
+* Java Built-in libraries
+** purpose using packages
+a package is a group of classes. helps so we dont have to rewrite things already done
+** accessing classes in packages
+package letmeCalc;
+public class Calculator {
+}
+then in another file...
+letmeCalc.Calculator obj = new letmeCalc.Calculator();
+obj.doMath;
+OR
+Calculator obj  = new Calculator();
+** default imported package in java
+java.lang - primitive types, string, math, thread, exceptions
+** static vs nonstatic
+static: className.fieldName
+EX: Math.ceil()
+
+nonstatic
+ClassName obj=new ClassName()
+obj.methodname();
+** *2* ways of generating random numbers in Java
+Math.random() * 6 + 1 (gives you dice roll)
+Random randObject = new Random();
+int number = rnd.nextInt();
+* Classes and Objects
+** Creating an object of a pre-existing class
+ClassName objectReference;
+objectReference = new ClassName();
+** access modifiers - public vs private vs protected
+public - can be accessed from inside or outside of the object
+private - can only be used by the object itself (protect data of class)
+/protected/ - allows class itself to access variables/methods, classes inside of the same package to access,
+and subclasses of that class to access them (stay within the main class)
+*** data hiding
+makes interface simplier
+need to know basis (least privlege)
+mpore secure
+** defining a class
+*** data attributes
+
+*** constructors
+used to intialize the members of an object
+same name as the class, has no return type
+c1 = new Circle(); -> Circle is the constructor
+c1 = new Circle(9.0);
+*** accessor and mutator methods
+accessor - returns a copy of an internal variable or computed variable (named with /get/)
+mutator - modifies the value of an internal data variable in some way (set)
+*** instance methods
+MyClass obj = new MyClass(); -> *instance*
+vs static
+MyClass.staticMethod();
+** instantiating a class (creating an object)
+MyClass obj = new MyClass()
+** difference between static vs instance methods
+MyClass obj = new MyClass(); -> *instance*
+vs static
+MyClass.staticMethod();
+** "this" keyword
+used to refer to differentiate between instance and local variables
+/this/ makes it an Instance variable/object,  not a local varaible
+also used to call one consturctor from another in a class
+** arrays of objects
+Syntax is the same
+Student[] list = new Student[10];
+then..
+list[0] = new Student();
+have to do it for every one, or just make a for loop
+list[i] will become a refernce to an object
+* Inheritance, Interfaces, and Polymorphism
+** base (super) and derived (sub) classes
+Inheritance allows one class to be derived from another
+if class Y is inherited from class X
+class X is the /superclass/
+class Y is the /subclass/
+** the super() keyword
+when making a derived object, the derived class consturctor needs to invoke the higher
+base class constructor
+** Method overriding
+the derived class can make a method with the same name as it's parent/superior/super class
+lets say Shape has a 
+void Draw() {
+} method
+then the sub class, Rectangle, also wants void Draw()
+this is method overriding
+** Abstract classes
+a very general base class that doesn't need any objects
+grouping place for common data and behavior of subclasses
+Shape s = new Shape(); // is illegal from an abstract class
+** delayed or dynamic binding
+a piece of code that works with object of type X, will also work with an object of a class type
+derived from X
+this is /polymorphism/ and is implemented througn *dynamic binding*
+** casting classes
+** interfaces
+   

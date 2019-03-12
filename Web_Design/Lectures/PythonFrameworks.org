@@ -1,0 +1,72 @@
+* Starting with Express again
+
+* TODO possible test question:
+what are the 2 http requests?
+get and post
+
+* resource "/"
+means root of website
+(www.google.com really means www.google.com/ )
+
+* middleware function
+has req's and res'
+requests and responses
+reqs -> data from user
+res -> response to client
+
+* JSON -> objects and stuff
+{ --> Object start
+"Price" [ --> array start 
+{ 
+"type": "Hardcover", --> also an object?
+}
+
+* post vs get
+handlers are very similar, but GET puts all info in the website address.
+POST does not put info in the URL. 
+
+* AJAX
+Asynchronous JS and XML
+lets you send and drive data from a server in the background (async) without interfering with the existing webpage
+web page can start requests in the background, does not need redirects, and details hidden from user
+handles JS for her example, and therefore data
+
+* TODO ajax may be good for validation
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* 
+
+* REACT
+React is a JS library for building a UI
+only front end
+maintained by FB
+
+
+* summary
+every web page uses HTML, but HTML isn't always written in HTML files. React can be used to develop 1 web page sites
+
+
+* Flask
+uses python
+same as React in terms of 3 things you need for a web server
+( see L14 and L13 slides)
+Really it's about how to handle recieving a GET from a Client, for example
+each language has a similar solution
+even has a dictionary like React w/ key value pairs
+"first_name': request.args.get('firstname_get')
+

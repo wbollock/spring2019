@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana', 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+.content {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto 0;
+}
+
+.row{
+    margin-bottom: 40px;
+}
+
+.inline_block{
+    display: inline-block;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+}
+
+.input_field{
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid darkslategrey;
+}
+
+
+
+
+

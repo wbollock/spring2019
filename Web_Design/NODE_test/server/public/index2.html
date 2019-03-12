@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Express - Examples</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <!-- Unlike index.html, this page uses javascript 
+            to make requests and receive responses-->
+        <script rel="script" type="text/javascript" 
+            src="js/scripts.js" defer></script>
+    </head>
+
+    <body>
+
+        <div class="content">
+            <h1>AJAX requests using fetch </h1>
+            <h2>GET request</h2>
+            <form id="get_form">
+                <div class="row">
+                    <label for="firstname_get">Firstname</label>
+                    <input id="firstname_get" name="firstname_get" 
+                        type="text" class="input_field"/>
+                </div>
+
+                <div class="row">
+                    <label for="lastname_get">Lastname</label>
+                    <input id="lastname_get" name="lastname_get" 
+                        type="text" class="input_field"/>
+                </div>
+
+                <div class="row">
+                    <input id="submit-get" name="submit_get" 
+                        type="submit" value="Submit using GET"/>
+                </div>
+
+                <div class="row">
+                    <div id="result-get">
+                        <h3>Output</h3>
+                        Nothing yet
+                    </div>
+                </div>
+            </form>
+
+
+            <h2>POST request</h2>
+            <form id="post_form">
+                <div class="row">
+                    <label for="firstname_post">Firstname</label>
+                    <input id="firstname_post" type="text" 
+                        class="input_field"/>
+                </div>
+
+                <div class="row">
+                    <label for="lastname_post">Lastname</label>
+                    <input id="lastname_post" type="text" 
+                        class="input_field"/>
+                </div>
+
+                <div class="row">
+                    <input id="submit-post" type="submit" 
+                        value="Submit using POST"/>
+                </div>
+
+                <div class="row">
+                    <div id="result-post">
+                        <h3>Output</h3>
+                        Nothing yet
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
