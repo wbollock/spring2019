@@ -14,11 +14,13 @@ function isNameValid() {
         failDivEmpty = "<p style=\"color:red\">Your string is empty.</p>";
         let rowArray = document.querySelectorAll(".row"); // first row, which is name
         rowArray[0].innerHTML += failDivEmpty; // manipulate the first row
+        return false; // meaning validation failed, don't pass anything to result
     }
     else if(nameVar[0] == nameVar[0].toUpperCase() && nameVar !== "") // if first char uppercase and not empty
     {
         new_output += "<div id=\"output\">" + userNameHTML + nameVar + "</div>";
         document.getElementById("output").innerHTML = new_output;
+        
     }
     else // if first letter of word is not capital
     {
@@ -26,6 +28,7 @@ function isNameValid() {
         failDiv = "<p style=\"color:red\">The first letter of your name must be capitalized.</p>";
         let rowArray = document.querySelectorAll(".row"); // first row, which is name
         rowArray[0].innerHTML += failDiv; // manipulate the first row
+        return false; // meaning validation failed, don't pass anything to result
     }
 } // end of functon
 
@@ -43,9 +46,10 @@ function isUsernameValid() {
         let rowArray = document.querySelectorAll(".row"); // username row
         rowArray[1].innerHTML += failDivEmpty; // manipulate the row
         console.log("Username empty");
+        //return false; // meaning validation failed, don't pass anything to result
     }
     else if(usernameVar.length > 4 && usernameVar !== "") 
-    // if username is not 5 characters long and not empty
+    // if username is  5 characters long and not empty
     {
         new_output += "<div id=\"output\">" + usernameHTML + usernameVar + "</div>";
         document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
@@ -57,6 +61,8 @@ function isUsernameValid() {
         failDiv = "<p style=\"color:red\">Your username must be 5 characters long</p>";
         let rowArray = document.querySelectorAll(".row"); 
         console.log("Username not 5 chars");
+        rowArray[1].innerHTML += failDiv; // manipulate the first row
+        return false; // meaning validation failed, don't pass anything to result
 
     }
 }
@@ -87,13 +93,17 @@ function isUsernameValid() {
 
 
 
-
-
 document.querySelector("#submit-btn").addEventListener("click", isNameValid);
 document.querySelector("#submit-btn").addEventListener("click", isUsernameValid);
 
 
 
+
 document.querySelector("#submit-btn").addEventListener("click", function(e){
+    if(isNameValid() === false || isUsernameValid() === false)
+        console.log("Both functions passed false");
+        
     e.preventDefault();
+    
 }); // prevent page from resetting after submit
+
