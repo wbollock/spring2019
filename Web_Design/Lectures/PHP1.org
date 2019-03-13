@@ -1,0 +1,118 @@
+* HTTP Requests (again?)
+
+** uri
+ protocol we use is HTTP
+URIs that start with http:// are called *URLs*
+
+* DNS 
+matches hostname to IP address
+** path location 
+reminder of URL after hostname
+translated by web server to real location, usually a virtual directory
+* Get & Post - HTTP transaction
+** Get
+indicates client wishes to obtain a resource from the server
+** status codes
+200 - success
+404 - tells client server can't locate resource
+** headers
+after this, sends data about the message
+including MIME
+** POST
+posts/sends data to the server
+good for authentication information, or form data.
+** get vs post
+get "gets" information from server (then server sends response)
+post "posts" data to server (then server sends response)
+* HTTP Transactions
+? in the url, everything that follows the ? is the query
+google.com/search?source=javascript
+see above
+* three tier architecture
+** top tier
+your computer, client computer
+(more on slides I missed it)
+** middle tier
+web server
+
+ensures that data is reliable
+updates database
+enforces the /business roles/
+** bottom tier
+data tier, database
+* Client side scripting
+used to validate user input, but /sensitive info should not be validated by client/
+can cause secruity issues
+has limitations
+* accessing web servers
+do it through localhost on your own computer
+also 127.0.0.1
+/aka loopback address/
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* Apache, MySQL, PHP
+** Apache
+most popular web server, open source
+** MySQL DB
+most popular open source DBMS
+** PHP
+requires webserver, CS dpt has PHP installed on ww2 server
+* XAMPP
+Web Stack - like AMPPS
+Apache, MariaDB, PHP, PERL
+X -> cross platform
+idk if she wants us to install it for whatever reason, but maybe remember you have to mount files?
+throw everything in htdocs
+
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* DATABASES
+databaes - collection of data
+database has nothing but a bunch of tables
+dbms - storing, organizing, retrieving, modifying data
+/relational databases/ - most popular
+SQL is international standard language for relational dbs
+/interface/ lets you facilitate communication between dbms and a program
+** relational dbs
+tables have rows & columns
+** primary key
+unqieu value not duplicated in other rows
+/Rule of Entity Integrity/ -> each row must have a primary-key value, and that value must be unique
+* one to many relationship
+a row in one table can have related rows in a seperate table
+*foreign key* -> primary key in 1 table that is a value in another table
+/Rule of Referential Integrity/ -> every foreign key value must be a primary key in another table
+* ERDs
+Entity relationship diagrams
+infinity symbol -> indicates a one to many relationship
+/many-to-many/ relationship -> indicates that multiple entries can be related btwn tables
+* keywords
+Inner Join
+Order By
+Group By
+* clauses
+we went over where, select, etc
+** WHERE clause
+/LIKE/ - a way to match characters
+LIKE can use percent % or underscore _
+Percent % -> a string must have zero or more characters with the char
+WHERE LastName LIKE 'D%' -> Last names w/ D
+
+OR
+Underscore _
+WHERE LastName LIKE '_o%'
+one character, MUST be o after first character. then can be anything
+really confusing 
+
