@@ -93,5 +93,15 @@ a piece of code that works with object of type X, will also work with an object 
 derived from X
 this is /polymorphism/ and is implemented througn *dynamic binding*
 ** casting classes
+Class Dog extends Animal
+c = s1; //illegal, have to cast it
+c = (Circle)s1; // legal
 ** interfaces
-   
+   a construct that only has constants and abstract methods
+like an abtract class but different, in that abstract can have regular vars/methods
+cant make objects
+/implements/ methods to use them
+*marker interface* - no data or methods
+public interface Cloneable
+{
+}
