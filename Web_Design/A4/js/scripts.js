@@ -101,7 +101,6 @@ function isPasswordValid() {
 
     }
 }
-// age
 function isAgeValid() {
     // must be more than 0
     let ageVar = document.getElementById("main-form").age.value;
@@ -119,8 +118,6 @@ function isAgeValid() {
     else if(ageValue > 0 && ageVar !== "") 
     // if age is 6 characters long and not empty (good)
     {
-        // replace age contents with age length
-        
         new_output += "<div id=\"output\">" + ageHTML + ageVar + "</div>";
         document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
         return 1; 
@@ -136,6 +133,40 @@ function isAgeValid() {
     }
 }
 
+function isBioValid() {
+    // must contain "fsu" or "florida state" -> not case sensitive
+    let bioVar = document.getElementById("main-form").bio.value;
+    let new_output = ""; 
+    let bioHTML = "<span style=\"color:black\">" + "Your bio is:" + "</span>";
+    console.log("Your bio is: " + bioVar);
+    console.log("bioVar.search(fsu) = " + bioVar.search("fsu"));
+    if(bioVar == "")  // cannot be empty
+    { 
+        let failDivEmpty = document.createElement("div");
+        failDivEmpty = "<p style=\"color:red\">Your bio is empty.</p>";
+        let rowArray = document.querySelectorAll(".row"); // bio row
+        rowArray[4].innerHTML += failDivEmpty; 
+        return 2;
+    }
+    else if( (parseInt(bioVar.search("fsu")) >= 0) || (parseInt(bioVar.search("florida state")) >= 0) && bioVar !== "") 
+    // if bio contains fsu/florida state and not empty (good)
+    {
+        console.log("bio good");
+        new_output += "<div id=\"output\">" + bioHTML + bioVar + "</div>";
+        document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
+        return 1; 
+    }
+    else // if bio doesn't have fsu/florida state
+    {
+        let failDiv = document.createElement("div");
+        failDiv = "<p style=\"color:red\">Your bio must have fsu or florida state.</p>";
+        let rowArray = document.querySelectorAll(".row");
+        rowArray[4].innerHTML += failDiv; 
+        return 2; 
+
+    }
+}
+
    
 
 document.querySelector("#submit-btn").addEventListener("click", function(event){
@@ -146,8 +177,9 @@ document.querySelector("#submit-btn").addEventListener("click", function(event){
     let userNameValue = isUsernameValid();
     let passwordValue = isPasswordValid();
     let ageFuncValue = isAgeValid();
+    let bioValue = isBioValid();
 
-    if(nameValidValue === 2 || userNameValue === 2 || passwordValue == 2 || ageFuncValue == 2)
+    if(nameValidValue === 2 || userNameValue === 2 || passwordValue == 2 || ageFuncValue == 2 || bioValue == 2)
     {
         // rewrite result to default
        document.getElementById("output").innerHTML = "<div id=\"output\"> Form not submitted yet </div>";
