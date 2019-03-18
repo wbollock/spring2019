@@ -1,6 +1,7 @@
 /* made by Will Bollock, for CGS 3066 */
 // TODO: get rid of Console.logs()
 // TODO: if it fails even JUST 1 VALIDATON RULE, cannot pass data to form and change output
+// TODO: bug -> "Your string is empty" appears after validation is false? Also happens w/ username
 function isNameValid() {
     // name must have first letter in uppercase
     // name must also be filled out
@@ -14,13 +15,13 @@ function isNameValid() {
         failDivEmpty = "<p style=\"color:red\">Your string is empty.</p>";
         let rowArray = document.querySelectorAll(".row"); // first row, which is name
         rowArray[0].innerHTML += failDivEmpty; // manipulate the first row
-        return false; // meaning validation failed, don't pass anything to result
+        return 2; // meaning validation failed, don't pass anything to result
     }
-    else if(nameVar[0] == nameVar[0].toUpperCase() && nameVar !== "") // if first char uppercase and not empty
+    else if(nameVar[0] == nameVar[0].toUpperCase() && nameVar !== "") 
+    // if first char uppercase and not empty (good)
     {
         new_output += "<div id=\"output\">" + userNameHTML + nameVar + "</div>";
         document.getElementById("output").innerHTML = new_output;
-        
     }
     else // if first letter of word is not capital
     {
@@ -28,7 +29,7 @@ function isNameValid() {
         failDiv = "<p style=\"color:red\">The first letter of your name must be capitalized.</p>";
         let rowArray = document.querySelectorAll(".row"); // first row, which is name
         rowArray[0].innerHTML += failDiv; // manipulate the first row
-        return false; // meaning validation failed, don't pass anything to result
+        return 2; // meaning validation failed, don't pass anything to result
     }
 } // end of functon
 
@@ -47,13 +48,15 @@ function isUsernameValid() {
         rowArray[1].innerHTML += failDivEmpty; // manipulate the row
         console.log("Username empty");
         //return false; // meaning validation failed, don't pass anything to result
+        return 2;
     }
     else if(usernameVar.length > 4 && usernameVar !== "") 
-    // if username is  5 characters long and not empty
+    // if username is  5 characters long and not empty (good)
     {
         new_output += "<div id=\"output\">" + usernameHTML + usernameVar + "</div>";
         document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
         console.log("Username good");
+        return 1;
     }
     else // if username is not 5 characters
     {
@@ -62,7 +65,7 @@ function isUsernameValid() {
         let rowArray = document.querySelectorAll(".row"); 
         console.log("Username not 5 chars");
         rowArray[1].innerHTML += failDiv; // manipulate the first row
-        return false; // meaning validation failed, don't pass anything to result
+        return 2; // meaning validation failed, don't pass anything to result
 
     }
 }
@@ -93,17 +96,28 @@ function isUsernameValid() {
 
 
 
-document.querySelector("#submit-btn").addEventListener("click", isNameValid);
-document.querySelector("#submit-btn").addEventListener("click", isUsernameValid);
+//document.querySelector("#submit-btn").addEventListener("click", isNameValid);
+//document.querySelector("#submit-btn").addEventListener("click", isUsernameValid);
 
 
+   
 
+document.querySelector("#submit-btn").addEventListener("click", function(event){
 
-document.querySelector("#submit-btn").addEventListener("click", function(e){
-    if(isNameValid() === false || isUsernameValid() === false)
-        console.log("Both functions passed false");
+    event.preventDefault();
+
+    let nameValidValue = isNameValid();
+    let userNameValue = isUsernameValid();
+
+    if(nameValidValue === 2 || userNameValue === 2)
+    {
+        // rewrite result to default
+        console.log("DEBUG: REWRITING OUTPUT");
+       document.getElementById("output").innerHTML = "<div id=\"output\"> Form not submitted yet </div>";
+    }
+
         
-    e.preventDefault();
+    
     
 }); // prevent page from resetting after submit
 
