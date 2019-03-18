@@ -61,7 +61,7 @@ function isUsernameValid() {
     else // if username is not 5 characters
     {
         let failDiv = document.createElement("div");
-        failDiv = "<p style=\"color:red\">Your username must be 5 characters long</p>";
+        failDiv = "<p style=\"color:red\">Your username must be 5 characters long.</p>";
         let rowArray = document.querySelectorAll(".row");
         rowArray[1].innerHTML += failDiv; // manipulate the first row
         return 2; // meaning validation failed, don't pass anything to result
@@ -94,9 +94,43 @@ function isPasswordValid() {
     else // if password is not 6 characters
     {
         let failDiv = document.createElement("div");
-        failDiv = "<p style=\"color:red\">Your password must be 6 characters long</p>";
+        failDiv = "<p style=\"color:red\">Your password must be 6 characters long.</p>";
         let rowArray = document.querySelectorAll(".row");
         rowArray[2].innerHTML += failDiv; 
+        return 2; 
+
+    }
+}
+// age
+function isAgeValid() {
+    // must be more than 0
+    let ageVar = document.getElementById("main-form").age.value;
+    let new_output = ""; 
+    let ageHTML = "<span style=\"color:black\">" + "Your age is:" + "</span>";
+    let ageValue = parseInt(ageVar);
+    if(ageVar == "")  // cannot be empty
+    { 
+        let failDivEmpty = document.createElement("div");
+        failDivEmpty = "<p style=\"color:red\">Your age is empty.</p>";
+        let rowArray = document.querySelectorAll(".row"); // age row
+        rowArray[3].innerHTML += failDivEmpty; // manipulate the row
+        return 2;
+    }
+    else if(ageValue > 0 && ageVar !== "") 
+    // if age is 6 characters long and not empty (good)
+    {
+        // replace age contents with age length
+        
+        new_output += "<div id=\"output\">" + ageHTML + ageVar + "</div>";
+        document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
+        return 1; 
+    }
+    else // if age is not > 0
+    {
+        let failDiv = document.createElement("div");
+        failDiv = "<p style=\"color:red\">Your age must be more than 0.</p>";
+        let rowArray = document.querySelectorAll(".row");
+        rowArray[3].innerHTML += failDiv; 
         return 2; 
 
     }
@@ -111,8 +145,9 @@ document.querySelector("#submit-btn").addEventListener("click", function(event){
     let nameValidValue = isNameValid();
     let userNameValue = isUsernameValid();
     let passwordValue = isPasswordValid();
+    let ageFuncValue = isAgeValid();
 
-    if(nameValidValue === 2 || userNameValue === 2 || passwordValue == 2)
+    if(nameValidValue === 2 || userNameValue === 2 || passwordValue == 2 || ageFuncValue == 2)
     {
         // rewrite result to default
        document.getElementById("output").innerHTML = "<div id=\"output\"> Form not submitted yet </div>";
