@@ -138,8 +138,6 @@ function isBioValid() {
     let bioVar = document.getElementById("main-form").bio.value;
     let new_output = ""; 
     let bioHTML = "<span style=\"color:black\">" + "Your bio is:" + "</span>";
-    console.log("Your bio is: " + bioVar);
-    console.log("bioVar.search(fsu) = " + bioVar.search("fsu"));
     if(bioVar == "")  // cannot be empty
     { 
         let failDivEmpty = document.createElement("div");
@@ -149,9 +147,8 @@ function isBioValid() {
         return 2;
     }
     else if( (parseInt(bioVar.search("fsu")) >= 0) || (parseInt(bioVar.search("florida state")) >= 0) && bioVar !== "") 
-    // if bio contains fsu/florida state and not empty (good)
+    // if bio contains fsu ORflorida state and not empty (good)
     {
-        console.log("bio good");
         new_output += "<div id=\"output\">" + bioHTML + bioVar + "</div>";
         document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
         return 1; 
@@ -166,7 +163,40 @@ function isBioValid() {
 
     }
 }
+function passGender() {
+    // pass through gender, no validation
+    let genderVar = document.getElementById("main-form").gender.value;
+    let new_output = ""; 
+    // switch statement to convert value of gender
+    console.log("genderVar is: " + genderVar);
+    switch(genderVar) {
+        case "xx":
+            genderVar = "Female";
+        break;
 
+        case "xy":
+            genderVar = "Male";
+        break;
+
+        case "oth":
+            genderVar = "Other";
+        break;
+
+        case "pns":
+            genderVar = "Prefer not to say";
+        break;
+
+    }
+    let genderHTML = "<span style=\"color:black\">" + "Your gender is:" + "</span>";
+    new_output += "<div id=\"output\">" + genderHTML + genderVar + "</div>";
+    document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
+
+}
+
+// checkbox
+// if user does not check that they like dogs, then user can only select
+// that they do not like dogs option
+// give error message if they try to select that
    
 
 document.querySelector("#submit-btn").addEventListener("click", function(event){
@@ -178,13 +208,15 @@ document.querySelector("#submit-btn").addEventListener("click", function(event){
     let passwordValue = isPasswordValid();
     let ageFuncValue = isAgeValid();
     let bioValue = isBioValid();
+    passGender();
 
     if(nameValidValue === 2 || userNameValue === 2 || passwordValue == 2 || ageFuncValue == 2 || bioValue == 2)
+    // if one of the values doesn't pass
     {
         // rewrite result to default
        document.getElementById("output").innerHTML = "<div id=\"output\"> Form not submitted yet </div>";
     }
-
+    
         
     
     
