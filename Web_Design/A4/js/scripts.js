@@ -12,25 +12,34 @@ function isNameValid() {
     let nameVar = document.getElementById("main-form").name.value;
     let new_output = "";
     let userNameHTML = "<span style=\"color:black\">" + "Your name is:" + "</span>";
+    // getting current state of row div
+    let rowArray = document.querySelectorAll(".row");
     if(nameVar == "") 
     {
         let failDivEmpty = document.createElement("div");
-        failDivEmpty = "<p style=\"color:red\">Your string is empty.</p>";
-        let rowArray = document.querySelectorAll(".row"); // first row, which is name
+        failDivEmpty = "<p style=\"color:red\" id=\"emptyString\">Your string is empty.</p>";
+        //let rowArray = document.querySelectorAll(".row"); // first row, which is name
         rowArray[0].innerHTML += failDivEmpty; // manipulate the first row
         return 2; // meaning validation failed, don't pass anything to result
     }
     else if(nameVar[0] == nameVar[0].toUpperCase() && nameVar !== "") 
     // if first char uppercase and not empty (good)
+    
     {
         new_output += "<div id=\"output\">" + userNameHTML + nameVar + "</div>";
         document.getElementById("output").innerHTML = new_output;
+
+        // also reset any "error messages"
+        //let rowArray = document.querySelectorAll(".row");
+        document.getElementById("emptyString").remove();
+        document.getElementById("noCaps").remove();
+        
     }
     else // if first letter of word is not capital
     {
         let failDiv = document.createElement("div");
-        failDiv = "<p style=\"color:red\">The first letter of your name must be capitalized.</p>"; // for uer
-        let rowArray = document.querySelectorAll(".row"); 
+        failDiv = "<p style=\"color:red\" id=\"noCaps\">The first letter of your name must be capitalized.</p>"; // for uer
+        //let rowArray = document.querySelectorAll(".row"); 
         rowArray[0].innerHTML += failDiv; 
         return 2; // meaning validation failed, don't pass anything to result
     }
@@ -270,6 +279,7 @@ function isDogValid() {
         return 1; 
     }
 }
+
    
 
 document.querySelector("#submit-btn").addEventListener("click", function(event){
