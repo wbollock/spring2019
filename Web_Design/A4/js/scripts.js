@@ -4,7 +4,7 @@
 //if it fails even JUST 1 VALIDATON RULE, cannot pass data to form and change output
 /*
 2a. EC: tell USer what went wrong as SOON as they enter data (possibly call function when field is in focus?)
-3. Fix bug in code allowing user to select Maloe and other gender at the same time
+3. Fix bug in code allowing user to select Mal e and other gender at the same time
 */
 
 function isNameValid() {
@@ -168,7 +168,6 @@ function passGender() {
     let genderVar = document.getElementById("main-form").gender.value;
     let new_output = ""; 
     // switch statement to convert value of gender
-    console.log("genderVar is: " + genderVar);
     switch(genderVar) {
         case "xx":
             genderVar = "Female";
@@ -197,20 +196,96 @@ function passGender() {
 // if user does not check that they like dogs, then user can only select
 // that they do not like dogs option
 // give error message if they try to select that
+function isDogValid() {
+    // values are "on" or "off"
+    let dogCertVar = document.getElementById("main-form").udogs.checked;
+   
+
+    let dogTypeVar = document.getElementById("main-form").topdog.value;
+    let new_output = "";
+    // if they don't certify they like dogs, user can only select "they dont like dogs"
+    if (dogCertVar === false && parseInt(dogTypeVar) > 0) // 0 is any type of dog
+    // false validation
+    {
+        let failDivEmpty = document.createElement("div");
+        failDivEmpty = "<p style=\"color:red\">You cannot select that you do not like dogs and have a favorite breed.</p>";
+        let rowArray = document.querySelectorAll(".row"); // bio row
+        rowArray[7].innerHTML += failDivEmpty; 
+        return 2;
+    }
+    else
+    // if validation is good, write both to the result div
+    {
+        if(dogCertVar === false)
+        {
+            let dogCertHTML = "<span style=\"color:black\">" + "Certification: " + "</span>";
+            new_output += "<div id=\"output\">" + dogCertHTML + "You do not certify that you like dogs." + "</div>";
+            document.getElementById("output").innerHTML += new_output;
+
+            new_output = "";
+            let dogTypeHTML = "<span style=\"color:black\">" + "Your favorite breed of dog is: " + "</span>";
+            // if they did not select that they like dogs, then they shouldnt have a favorite dog breed
+            new_output += "<div id=\"output\">" + dogTypeHTML + "I did not say that I like dogs." + "</div>";
+            document.getElementById("output").innerHTML += new_output;
+        }
+        else
+            {
+            let dogCertHTML = "<span style=\"color:black\">" + "Certification: " + "</span>";
+            new_output += "<div id=\"output\">" + dogCertHTML + "You certify that you like dogs." + "</div>";
+            document.getElementById("output").innerHTML += new_output;
+           
+                switch(dogTypeVar) { // convert dog type value
+                    case "0":
+                        dogTypeVar = "I did not say I like dogs";
+                    break;
+            
+                    case "1":
+                        dogTypeVar = "Labrador";
+                    break;
+            
+                    case "2":
+                        dogTypeVar = "Golden Retreiver";
+                    break;
+            
+                    case "3":
+                        dogTypeVar = "Corgi";
+                    break;
+
+                    case "4":
+                        dogTypeVar = "Chihuahua";
+                    break;
+
+                    case "5":
+                        dogTypeVar = "Other";
+                    break;
+                } // end of switch
+                // write dog type to result
+                console.log("reaching dogType HTML");
+            new_output = "";
+            let dogTypeHTML = "<span style=\"color:black\">" + "Your favorite breed of dog is: " + "</span>";
+            new_output += "<div id=\"output\">" + dogTypeHTML + dogTypeVar + "</div>";
+            document.getElementById("output").innerHTML += new_output;
+            }
+
+        // += takes out output and adds new output
+        return 1; 
+    }
+}
    
 
 document.querySelector("#submit-btn").addEventListener("click", function(event){
 
     event.preventDefault();
-
+    // call functions and assign values of return statements
     let nameValidValue = isNameValid();
     let userNameValue = isUsernameValid();
     let passwordValue = isPasswordValid();
     let ageFuncValue = isAgeValid();
     let bioValue = isBioValid();
     passGender();
+    let dogValue = isDogValid();
 
-    if(nameValidValue === 2 || userNameValue === 2 || passwordValue == 2 || ageFuncValue == 2 || bioValue == 2)
+    if(nameValidValue === 2 || userNameValue === 2 || passwordValue === 2 || ageFuncValue === 2 || bioValue === 2 || dogValue === 2)
     // if one of the values doesn't pass
     {
         // rewrite result to default
