@@ -4,7 +4,6 @@
 //if it fails even JUST 1 VALIDATON RULE, cannot pass data to form and change output
 /*
 2a. EC: tell USer what went wrong as SOON as they enter data (possibly call function when field is in focus?)
-3. Fix bug in code allowing user to select Mal e and other gender at the same time
 */
 
 function isNameValid() {
