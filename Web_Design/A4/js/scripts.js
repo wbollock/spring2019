@@ -6,7 +6,7 @@
 2a. EC: tell USer what went wrong as SOON as they enter data (possibly call function when field is in focus?)
 */
 
-function isNameValid() {
+function isNameValid(event) {
     // name must have first letter in uppercase
     // name must also be filled out
     let nameVar = document.getElementById("main-form").name.value;
@@ -14,8 +14,12 @@ function isNameValid() {
     let userNameHTML = "<span style=\"color:black\">" + "Your name is:" + "</span>";
     // getting current state of row div
     let rowArray = document.querySelectorAll(".row");
+
+
+    
     if(nameVar == "") 
     {
+       // event.preventDefault();
         let failDivEmpty = document.createElement("div");
         failDivEmpty = "<p style=\"color:red\" id=\"emptyString\">Your string is empty.</p>";
         //let rowArray = document.querySelectorAll(".row"); // first row, which is name
@@ -30,17 +34,30 @@ function isNameValid() {
         document.getElementById("output").innerHTML = new_output;
 
         // also reset any "error messages"
-        //let rowArray = document.querySelectorAll(".row");
-        document.getElementById("emptyString").remove();
-        document.getElementById("noCaps").remove();
+        
+
+        // see if the error message element exists, if so, remove it when validation is good
+        // doesn't work because it doesn't let user type
+        let emptyStringID = document.getElementById("emptyString");
+            if(emptyStringID){
+                document.getElementById("emptyString").remove();
+            }
+
+        let noCapsID = document.getElementById("noCaps");
+            if(noCapsID){
+                 document.getElementById("noCaps").remove();
+            }    
+       
         
     }
     else // if first letter of word is not capital
     {
+        
         let failDiv = document.createElement("div");
         failDiv = "<p style=\"color:red\" id=\"noCaps\">The first letter of your name must be capitalized.</p>"; // for uer
         //let rowArray = document.querySelectorAll(".row"); 
         rowArray[0].innerHTML += failDiv; 
+       
         return 2; // meaning validation failed, don't pass anything to result
     }
 } // end of functon
@@ -53,7 +70,7 @@ function isUsernameValid() {
     if(usernameVar == "")  // cannot be empty
     { 
         let failDivEmpty = document.createElement("div");
-        failDivEmpty = "<p style=\"color:red\">Your username is empty.</p>";
+        failDivEmpty = "<p style=\"color:red\" id=\"emptyUsr\">Your username is empty.</p>";
         let rowArray = document.querySelectorAll(".row"); // username row
         rowArray[1].innerHTML += failDivEmpty; // manipulate the row
         //return false; // meaning validation failed, don't pass anything to result
@@ -64,12 +81,27 @@ function isUsernameValid() {
     {
         new_output += "<div id=\"output\">" + usernameHTML + usernameVar + "</div>";
         document.getElementById("output").innerHTML += new_output; // += takes out output and adds new output
-        return 1; 
+
+        
+        let emptyUsrID = document.getElementById("emptyUsr");
+            if(emptyUsrID){
+                document.getElementById("emptyUsr").remove();
+            }
+
+        let usrLenID = document.getElementById("usrLen");
+            if(usrLenID){
+                 document.getElementById("usrLen").remove();
+            }    
+        
+        
+       
+        
+
     }
     else // if username is not 5 characters
     {
         let failDiv = document.createElement("div");
-        failDiv = "<p style=\"color:red\">Your username must be 5 characters long.</p>";
+        failDiv = "<p style=\"color:red\" id=\"usrLen\">Your username must be 5 characters long.</p>";
         let rowArray = document.querySelectorAll(".row");
         rowArray[1].innerHTML += failDiv; // manipulate the first row
         return 2; // meaning validation failed, don't pass anything to result
@@ -280,6 +312,9 @@ function isDogValid() {
     }
 }
 
+
+let myTextbox = document.getElementById("main-form").name;
+myTextbox.addEventListener('keypress', isNameValid(), false);
    
 
 document.querySelector("#submit-btn").addEventListener("click", function(event){
