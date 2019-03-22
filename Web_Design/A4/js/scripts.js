@@ -1,6 +1,6 @@
 /* made by Will Bollock, for CGS 3066 */
 
-// TODO: get rid of Console.logs()
+//
 //if it fails even JUST 1 VALIDATON RULE, cannot pass data to form and change output
 /*
 2a. EC: tell USer what went wrong as SOON as they enter data (possibly call function when field is in focus?)
@@ -301,7 +301,6 @@ function isDogValid() {
                     break;
                 } // end of switch
                 // write dog type to result
-                console.log("reaching dogType HTML");
             new_output = "";
             let dogTypeHTML = "<span style=\"color:black\">" + "Your favorite breed of dog is: " + "</span>";
             new_output += "<div id=\"output\">" + dogTypeHTML + dogTypeVar + "</div>";
