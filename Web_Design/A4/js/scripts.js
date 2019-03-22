@@ -38,6 +38,7 @@ function isNameValid(event) {
 
         // see if the error message element exists, if so, remove it when validation is good
         // doesn't work because it doesn't let user type
+        /* attempt at real time validation
         let emptyStringID = document.getElementById("emptyString");
             if(emptyStringID){
                 document.getElementById("emptyString").remove();
@@ -47,7 +48,7 @@ function isNameValid(event) {
             if(noCapsID){
                  document.getElementById("noCaps").remove();
             }    
-       
+       */
         
     }
     else // if first letter of word is not capital
@@ -313,8 +314,8 @@ function isDogValid() {
 }
 
 
-let myTextbox = document.getElementById("main-form").name;
-myTextbox.addEventListener('keypress', isNameValid(), false);
+//let myTextbox = document.getElementById("main-form").name;
+//myTextbox.addEventListener('keypress', isNameValid(), false);
    
 
 document.querySelector("#submit-btn").addEventListener("click", function(event){
