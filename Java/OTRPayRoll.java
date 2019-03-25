@@ -5,8 +5,8 @@
          Accessors & Mutators -> getters/setters in encap
          Multiple Java Class Files -> OTRPayrollEncap.java, many classes there
          Method Overridng -> adding extra functionality with printText extends userInfo
-/ TODO: Overloading
-        Paramterized constructor
+         Overloading -> payrollCalc function, different based on # of parameters
+        Paramterized constructor -> class name ParameterizedConstructor, intro text, parameter given in main
 */  
 import java.io.*;
 import java.text.DecimalFormat;
@@ -16,10 +16,18 @@ class payRate { // inheritance
  static double milePay = 0.55;
 }
 
+class ParameterizedConstructor {
+    String intro;
+
+    ParameterizedConstructor(String str){
+        intro = str;
+    }
+}
 
 
 
 public class OTRPayRoll extends payRate {
+
     // overloading example, function changes based on parameters
     static double payrollCalc(double payrate, double hours){
         return payrate * hours;
@@ -73,6 +81,10 @@ public class OTRPayRoll extends payRate {
 
    
     public static void main(String[] args) {
+
+        ParameterizedConstructor introString = new ParameterizedConstructor("This is the On The Rocks Payroll Program. Please enter employee name, pay rate, hours, tips, and miles when prompted.");
+        System.out.println(introString.intro);
+
     	OTRPayRollEncap encap = new OTRPayRollEncap(); // getters and setters
     	// encapusulation
     	PrintingInfo writeObject = new PrintingInfo();
@@ -107,7 +119,7 @@ public class OTRPayRoll extends payRate {
             encap.setEmpMiles(sc.nextDouble());
             
             empTotPay = payrollCalc(encap.getEmpHours(), encap.getPayRate(), encap.getEmpMiles(), encap.getEmpTips());
-
+            // rounding numbers
             empTotPay = Math.round((empTotPay * 10000d) / 10000d);
 
             /*empTotPay = (Math.round(((encap.getEmpHours() * encap.getPayRate()) + 
@@ -123,12 +135,6 @@ public class OTRPayRoll extends payRate {
             System.out.println("Employee number " + (i + 1) + " has been completed.");
             System.out.println("");
         } // end of for loop
-/*
-TODO:
-Options for connectivity:
-    1. Make Web App -> Database connectivity w/ MySQL local DB. Follow Jowett A2 to do this.
-    2. Long switch statement
-*/
     } // end of main
 
 } // end of class 
