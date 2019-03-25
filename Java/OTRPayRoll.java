@@ -1,7 +1,13 @@
 //Made by Will bollock
-// note for OVERLOADING/OVERRIDING
-// https://beginnersbook.com/2014/01/difference-between-method-overloading-and-overriding-in-java/
-// can use overloading for adding pay
+/* DONE: Encapsulation -> (vars set private) with getters/setters
+/        Inheritance -> OTRPayRoll extends Payrate
+         Abstract Class -> userInfo
+         Accessors & Mutators -> getters/setters in encap
+         Multiple Java Class Files -> OTRPayrollEncap.java, many classes there
+         Method Overridng -> adding extra functionality with printText extends userInfo
+/ TODO: Overloading
+        Paramterized constructor
+*/  
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
@@ -10,7 +16,20 @@ class payRate { // inheritance
  static double milePay = 0.55;
 }
 
+
+
+
 public class OTRPayRoll extends payRate {
+    // overloading example, function changes based on parameters
+    static double payrollCalc(double payrate, double hours){
+        return payrate * hours;
+    }
+    static double payrollCalc(double payrate, double hours, double miles){
+        return (payrate * hours) + (miles * 0.55);
+    }
+    static double payrollCalc(double payrate, double hours, double miles, double tips){
+        return (payrate * hours) + (miles * 0.55) + tips;
+    }
 
     interface createFile { // interface
         public void writeFile(String fileName, String empName, double empTips, double empHours, double TotalPay, double empMiles);
@@ -46,11 +65,13 @@ public class OTRPayRoll extends payRate {
     	abstract void numEmployees();
     }
     
-    static class printText extends userInfo{
+    static class printText extends userInfo{ // method Overriding -> implement extra functionality 
         void introText(){System.out.println("Welcome to the OTR Payroll program.");}
         void payrollText(){System.out.println("Please enter the name of the payroll text file:");}
         void numEmployees(){System.out.println("Please enter the number of employees on this payroll:");}        
     }
+
+   
     public static void main(String[] args) {
     	OTRPayRollEncap encap = new OTRPayRollEncap(); // getters and setters
     	// encapusulation
@@ -85,8 +106,12 @@ public class OTRPayRoll extends payRate {
             System.out.println("Enter the employee's miles:");
             encap.setEmpMiles(sc.nextDouble());
             
-            empTotPay = (Math.round(((encap.getEmpHours() * encap.getPayRate()) + 
-            		(encap.getEmpMiles() * milePay) + encap.getEmpTips())* 10000d) / 10000d);
+            empTotPay = payrollCalc(encap.getEmpHours(), encap.getPayRate(), encap.getEmpMiles(), encap.getEmpTips());
+
+            empTotPay = Math.round((empTotPay * 10000d) / 10000d);
+
+            /*empTotPay = (Math.round(((encap.getEmpHours() * encap.getPayRate()) + 
+            		(encap.getEmpMiles() * milePay) + encap.getEmpTips())* 10000d) / 10000d);*/
           
             writeObject.writeFile(encap.getFileName(), encap.getEmpName(), encap.getEmpTips(), encap.getEmpHours(), empTotPay, 
                             encap.getEmpMiles());

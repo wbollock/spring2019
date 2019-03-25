@@ -1,0 +1,6 @@
+Will B made $120.0
+Will B had 12.0 hours, $0.0 tips, and 0.0 miles.
+------------------------------------
+Alex M made $255.0
+Alex M had 10.0 hours, $100.0 tips, and 100.0 miles.
+------------------------------------
