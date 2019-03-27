@@ -1,0 +1,29 @@
+* infinity symbol
+one to many relationship
+* WHERE clause
+SELECT title, EditionNumber, Copyright
+FROM
+Titles
+WHERE Copyright > '2010'
+note the use of single quotes, NOT double quotes
+* Benefits of MySQL
+Scalability, performance, support for many languages, many versions of MySQL, large DBs
+*
+* 
+* LECTURE 2
+* Numeric data types
+Ints - most numbers
+UNSIGNED - all positive numbers
+Bits - 0 or 1
+* Deleting tables
+DROP TABLE;
+drop database ->
+DROP DATABASE db;
+* 
+* 
+* PHP
+server side programming. can store data on server as files or in DB like MySQL
+PHP is thrown right into HTML with 
+<?php
+//CODE
+?>

@@ -1,0 +1,108 @@
+* PHP
+server side programming language
+for server side validation
+* TODO test variable info
+know variable requirements - loosely typed
+$ symbol - all variables
+caes sensitive
+MUST start with letter/underscore
+can only be letters & numbers
+* number variables
+php will convert intergers to floats if needed
+if you use an existing variable name, but its not the same case, PHP won't recongnize it
+PHP needs ;
+** strings
+$firstName = 'Fluffy';
+$fullName = $firstame . 'McDougle';
+/uses DOT OPERATOR to concatanate/
+can also use .=
+* converting between data types
+can force types with *settype*
+** setype
+type converts
+takes variable that you want to change type, and new type
+can result in TRUNCATION - doubles converted to ints, for example
+** gettype
+returns current type of var
+** converting from string to number
+php uses the value of the first char in the string
+if there's no leading number, then 0
+* type casting
+casting does not change variable's content - creates a temporary copy of the variable's value in memory
+I think casting is just doing 
+(double) $data
+makes $data into a double for that purpose
+type casting doesn't lose data cause it's temporary
+* debugging/print
+print statement can be split over multiple lines
+example to print HTML
+print( "<p class='space'>Before casting: $data is a " .
+      gettype( $data ). "</p>" );
+see that it's in multiple lines
+* php conditional statements
+<!doctype html>
+<?php
+$d = date("D");
+if ($d == "Fri")
+// do shit
+?>
+* define function
+creates a constant
+needs two arguments -> name and value of constant
+define ( "VALIE", 5 );
+** unintiailized variables
+have undefined values that evaluate differently
+numbers - 0
+string - "undef"
+* operators
+php has a lot of operators with precedences
+might be good for that on the cheat sheet
+* arrays
+$cars = array("BMW","Nissan","Honda");
+$cars[0] = "BMW";
+$cars[1] = "Nissan";
+
+// using function array
+* associatve arrays
+arrays with non-numeric indicies
+using the operator =>
+$ages = array("Peter"=>32,"Nancy"=>30);
+echo '$ages['Peter']';
+// will print 32
+key value pair!!!
+* php loops
+
+\fuck i wasnt watching
+** foreach
+good for iterating through arrays
+$cars = array("BMW","Nissan","Honda");
+foreach ($cars as $c)
+{echo $c . "<br>";}
+* iterating through arrays
+pointers?!!
+every array has an internal pointer that points to the array element
+function re
+** reset
+sets internal pointer to first array element
+** key
+returns index of element currently referenced by the internal pointer
+** next
+moves the internal pointer to the next element
+** TODO
+think of pointer as an address
+defintely get some pointer/associtae array stuff on cheat sheet
+she has a good example in slides, arrays.php
+
+** count function for arrays
+ returns total # of elements in the array
+
+* string comparisons
+
+** strcmp
+compaes two strings
+might want to get the output on CHEAT SHEET
+
+* GET/POST
+there's some good stuff in a powerpoint about PHP, get/post
+process.php and all that
+
