@@ -6,7 +6,8 @@
          Multiple Java Class Files -> OTRPayrollEncap.java, many classes there
          Method Overridng -> adding extra functionality with printText extends userInfo
          Overloading -> payrollCalc function, different based on # of parameters
-        Paramterized constructor -> class name ParameterizedConstructor, intro text, parameter given in main
+         
+         Paramterized constructor -> class name ParameterizedConstructor, intro text, parameter given in main
 */  
 import java.io.*;
 import java.text.DecimalFormat;
@@ -46,7 +47,7 @@ public class OTRPayRoll extends payRate {
     static class PrintingInfo implements createFile { // hides object details
         public void writeFile(String fileName, String empName, double empTips, double empHours, double TotalPay, double empMiles) {
             try{
-             FileWriter fstream = new FileWriter(fileName,true);
+                            FileWriter fstream = new FileWriter(fileName,true);
                             BufferedWriter out = new BufferedWriter(fstream);
                             out.write(empName + " made $" + TotalPay);
                             out.newLine();
@@ -121,6 +122,7 @@ public class OTRPayRoll extends payRate {
             empTotPay = payrollCalc(encap.getEmpHours(), encap.getPayRate(), encap.getEmpMiles(), encap.getEmpTips());
             // rounding numbers
             empTotPay = Math.round((empTotPay * 10000d) / 10000d);
+
 
             /*empTotPay = (Math.round(((encap.getEmpHours() * encap.getPayRate()) + 
             		(encap.getEmpMiles() * milePay) + encap.getEmpTips())* 10000d) / 10000d);*/

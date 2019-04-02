@@ -1,0 +1,134 @@
+* Regular Expressions
+characters that serve as pattern-matching templates
+validating user input data
+* preg_match
+uses regular expressions to search a string for a pttern
+$x = preg_match ( "/Now/", "Now is the time" );
+print("$x"); // returns 1 (it found "Now" in "Now is the time")
+** interpolation
+print("$x"); // prints 1
+print('$x'); // prints $x
+print("'$x'"); // prints '1'
+use preg_match("/noW/i") to ignore CASE
+the i at the end ignores case
+** patterns and metacharacters
+^ caret- matches beginning of string
+& dollar - matches the end of the string
+. period - matches any single character, except newlines
+(s can be used to match newlines? must be on a new line?)
+(s is a flag like i)
+** bracket expressions
+lists of characters enclosed in []
+match any single character in the list
+can do ranges with a -
+\b before and after paraentheses indcate the beginning and ending of a word
+\b\ just requires the [] to search for an actual word
+[a-zA-Z] is the entire alaphabet
+** quantifiers
+used in reg expressions to say how often something appears
+{n} exactly /n/ times
+{m,n} /between m and n times/
+one   or more times {1,}
+*means zero or more times {0, }
+? means zero or one time {0,1}
+note, must be /back to back/
+"/p{2,3}/","p p" will return 0
+** character classes
+enclosed by brackets like [[: :]/]/
+ignore the second /
+[[:alpha:]/], same as [a-zA-Z]
+[[:alpha:]]
+alpha, digit, album, space, lower, upper
+** finding matches
+can also use a third argument to 
+preg_match(REGEX, $whatToSearch, $storeArray)
+$storeArray[0] = whole thing it found
+$storeArray[1] = first word, etc
+$storeArray[2] = second word, and so on
+* preg_replace
+takes pattern to match, string to replace the matched string, and a string to search
+removes what you match
+* 
+** 
+* 
+* FORMS
+* action and method
+action="process.php" -> tells browser what script/site to do when
+visitor presses submit
+method=tells browser HOW to process - either POST or GET
+POST = sending something
+GET = retrieving something
+** GET example
+$_GET['firstname'] (associative array, indexed by values not numbers)
+** Suberglobal arrays
+associative array (indexed by words ) - these are superglobal
+numeric array (indexed by numbers) 
+TODO ON TEST!!!
+*** other superglobals
+$_SERVER
+$_ENV
+$_GET
+$_POST
+etc
+** example process.php
+<?php
+function welcome($fname, $lname)
+{
+echo '<h1>Welcome ' . '$fname';
+}
+welcome($_GET['firstname'], $_GET['lastname'];
+** die() function
+terminates script execution
+** backslash \
+escapes characters
+TODO: Test question - can you grab clientside information to process it in PHP using HTML?
+No, you need to process it with PHP on the server side.
+TODO: on tests, probably going to be a question about the 3 tiers and where business logic fits in?
+* 
+* 
+* INTEGRATING PHP AND MYSQL
+** mysqli_select_db()
+ 
+ mysqli_connection takes:
+ server hostname
+ username
+ password
+ returns DB handle if it connects right
+how do you make DB in CS server?
+** mysqli_close
+do this last. 
+** mysqli_query -
+pecify query string and the database to query
+/can do insert and deletes/
+** first, make a database
+use .sql file
+* 
+* 
+* 
+* using cookies
+server can only access cookies it has placed on client
+cookie is a piece of info stored by the server on a client's computer to keep info about client after browsing session is over
+** persistent cookie
+has an expiration date, after which the browser deletes it
+** session cookie
+lasts only until end of current session - if no expiration date is specifies
+** function setcookie
+in php
+takes name of cookie to be set, then value to be stored
+can also do expiration date, if you want it to be persitent/session
+setcookie needs to be called BEFORE anything else
+php creates suberglobal array $_COOKIE
+remember that suberglobal/associate arrays have *key-value* pairs
+need $key => $value
+* dynamic forms
+keeping data after mistakes, keeps form data in the form, etc
+** $$variable
+double dollar sign
+specifices a variable variable, /used to obtain the value of variable??????/
+** isset function
+used to determine whether the $_POST array contains keys representing the various form fields
+if true, then form has been submitted
+if ( isset( $_POST["submit"] ) )
+{
+if ( $fname == "" )
+
