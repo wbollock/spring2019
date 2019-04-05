@@ -1,0 +1,73 @@
+* File handling in PHP
+Files are persistant and stay after shutdown
+RAM does not
+** files
+files are just oredered sequences of bytes
+directories are also files - just special ones that hold the names of other files
+and pointers to those files
+** include function
+lets you use other code from other files, even libaries
+can store functions and their definitions in a seperate file, then use
+include() on the function
+** file_size and file_exists
+takes a file name, specifices size of file or if file exists
+* opening a file
+if you know it exists, and you can find it, you will want to open it
+use a /file handle/
+a *pointer* that you can use to access a file
+when you're done, you close the file handle and it takes it out of memory
+** fopen()
+$handle = fopen("data.txt", "r");
+r = read
+w = write
+r+ = reading and writing
+a = appending - write to end of file
+a+ = read and append
+
+w will actually overwrite any existing chars
+
+php will try to create file if it doesn't exist if you're adding data
+error checking:
+if ( !($handle = fopen("data.txt","r") ))
+die("Cannot open the file )";
+** fclose()
+close it with fclose($handle);
+close the handler, not the file
+** fread()
+$handle = fopen("daat.txt","r");
+$data = fread($handle, 10);
+will read first 10 characters of file and put them in $data as a string
+after fread, the handler will /move forward X characters/ in this case 10
+if there's less than 10 characters left, it will just return the rest
+** fgetc()
+good for reading 1 character a time
+slow w/ large fules
+returns false when at the end of the file
+** feof()
+tests for end of file
+true when file pointer(handle) is at the end of the file
+foef($handle)
+literally needs to go past the end of the file, file handle can't be at the end of the file, needs to go past
+** fgets()
+reads until a new line
+returns the characters as a string, or false if end of file is reached
+note: $lineNumber++ will increment after the thing is run
+** frwrite()
+will erase any existing data in the file or create it
+frwite() will keep moving the pointer like fread() after it's done
+* MySQL PDO
+PHP Data Objects -> PDO
+** PDO
+first, make a new PDO
+need -> what database
+username
+password
+** using it
+can do stuff like
+$sql = "SELECT * FROM fruit";
+$rows = $conn -> query($sql);
+foreach( $rows as $row) {
+ // print name/color
+}
+explanation: $conn is your PDO connection, querys the $sql statement you wrote
+$row give the results of the query
