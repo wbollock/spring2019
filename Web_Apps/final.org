@@ -1,0 +1,49 @@
+* HTML CONTROL
+spinner object, check box, text fields, etc
+* Spinner Control
+look it up?
+* check box vs radio button
+* text area
+* he said something about hosts earlier i wasn't listening
+* diigtal secure certificate
+online store/platform
+also need a secure connection and HTTPS
+get from certificate authority
+* 2 sided tag
+<body>
+</body>
+* TLD
+tag lib directive
+JSP
+* connection pooling and why we use it
+* data types for scriptin vars
+string object, primitive, wrapper class
+* prepared statement
+will be code for prepared statement
+used to prevent SQL injection
+* SQL attack 
+insert/delete/modify data
+* least verbose join
+
+JOIN ON
+JOIN USING
+NATURAL JOIN
+
+/Outer joins/
+A left outer join returns all the rows from the first table and all matching values of the right table
+* secure connection
+SSL strength = strength provided by certifcate, web server, and browser
+max SSL strength is deterimed by the digital secure certificate
+* SQL questions
+insert/select/update/delete
+* reference vs data type
+reference type points to a memory address
+* create constant in java
+final
+value cannot change
+* Big Decimal class
+avoids rounding errors
+* switch statement
+switch case break default
+* calling environment
+must agree in type, order, number

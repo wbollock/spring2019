@@ -1,3 +1,10 @@
 * LECTURES
 ON LECTURES 15,16,17 ONLY
 1 CHEAT SHEET FRONT AND BACK
+similar to previous tests
+
+* FOR Final 
+Code writing - know php, sql, MYSQL_I ** know those**, html, css
+will be connecting to a database
+will have to write a regexpression
+example: for this type of username, write this type of reg ex

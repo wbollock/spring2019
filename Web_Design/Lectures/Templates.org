@@ -1,0 +1,8 @@
+* Templates
+sometimes we have to render entire web pages server-side
+because the client will need to download way too much JS
+** templates
+are html-ish files that describes an incomplete web page
+can use non-html instruction like JS, Python, PHP
+can use loops
+

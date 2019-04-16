@@ -34,7 +34,7 @@ public class Ascii {
 		System.out.print("Please enter ASCII value(32-127): ");
 		ascii_value = sc.nextInt();
 		while (ascii_value < 32 || ascii_value > 127)
-		{
+s
 			System.out.println("Please enter a value between 32-127..");
 			ascii_value = sc.nextInt();
 		}
