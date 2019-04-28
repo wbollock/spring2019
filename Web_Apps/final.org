@@ -47,3 +47,21 @@ avoids rounding errors
 switch case break default
 * calling environment
 must agree in type, order, number
+* shortcut assignment operator
+i += 1;
+i = i + 1;
+* byte vs long vs int vs float
+* most used access modifier
+public
+also have private, protected
+* stack trace
+how to get output from stack trace
+last line of stack trace will show you line number of the error
+* try/catch block
+* something about sub classes of exception classes
+examples of exceptions: number format, null pointer, arthimetic exception
+* explict casting
+y = (int) x
+* parseInt
+any user input is a string
+
